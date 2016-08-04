@@ -29,13 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:anotherworld-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 7
 Title ""
-Date "3 aug 2016"
+Date "4 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -54,5 +55,29 @@ S 1700 2800 1450 350
 U 57A22D68
 F0 "Instruction Decoder" 50
 F1 "instruction_decoder.sch" 50
+$EndSheet
+$Sheet
+S 1700 3400 1450 350 
+U 57A248D2
+F0 "Master Clock" 50
+F1 "master_clock.sch" 50
+$EndSheet
+$Sheet
+S 1700 4000 1450 350 
+U 57A24908
+F0 "Jump Instructions Decoder" 50
+F1 "jump_decoder.sch" 50
+$EndSheet
+$Sheet
+S 1700 4600 1450 300 
+U 57A24939
+F0 "Registers" 50
+F1 "registers.sch" 50
+$EndSheet
+$Sheet
+S 1700 5100 1450 350 
+U 57A2BA94
+F0 "Stack" 50
+F1 "stack.sch" 50
 $EndSheet
 $EndSCHEMATC
