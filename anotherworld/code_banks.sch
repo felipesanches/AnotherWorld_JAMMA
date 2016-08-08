@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 8 8
+Sheet 7 8
 Title ""
 Date "8 aug 2016"
 Rev ""
@@ -156,20 +156,14 @@ Connection ~ 8100 2300
 Connection ~ 8200 2450
 Connection ~ 8300 2600
 Connection ~ 8400 2750
-Text GLabel 5200 5100 0    60   Input ~ 0
--IPH_OE
 Wire Wire Line
-	7400 4300 7400 5100
-Wire Wire Line
-	7400 5100 5200 5100
+	7400 4300 7400 4400
 Text GLabel 5200 4750 0    60   Input ~ 0
 IPH_CLK
 Wire Wire Line
 	7500 4300 7500 4750
 Wire Wire Line
 	7500 4750 5200 4750
-Text GLabel 5200 5250 0    60   Input ~ 0
--IPL_OE
 Text GLabel 5200 4900 0    60   Input ~ 0
 IPL_CLK
 $Comp
@@ -184,9 +178,7 @@ F 3 "~" H 7900 3600 60  0000 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	8700 4300 8700 5250
-Wire Wire Line
-	8700 5250 5200 5250
+	8700 4300 8700 4400
 $Comp
 L 74LS374 U?
 U 1 1 57A84059
@@ -397,4 +389,26 @@ Wire Wire Line
 	5200 4900 8800 4900
 Wire Wire Line
 	8800 4900 8800 4300
+$Comp
+L GND #PWR?
+U 1 1 57A7F509
+P 7400 4400
+F 0 "#PWR?" H 7400 4400 30  0001 C CNN
+F 1 "GND" H 7400 4330 30  0001 C CNN
+F 2 "" H 7400 4400 60  0000 C CNN
+F 3 "" H 7400 4400 60  0000 C CNN
+	1    7400 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 57A7F50F
+P 8700 4400
+F 0 "#PWR?" H 8700 4400 30  0001 C CNN
+F 1 "GND" H 8700 4330 30  0001 C CNN
+F 2 "" H 8700 4400 60  0000 C CNN
+F 3 "" H 8700 4400 60  0000 C CNN
+	1    8700 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

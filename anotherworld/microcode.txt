@@ -1,25 +1,94 @@
-CONTROL UNIT SIGNALS:
+# This file is a "script" in a pseudo-language
+# that I came up with meant to specify the microcode
+# implementation for all of the CPU instructions
 
-CODEBANK_CLK
-IPH_CLK
-IPL_CLK
-OPCODE_CLK
--IPH_OE
--IPL_OE
--CODEBANK_OE
-ALU_CARRY_IN
-ALU_MODE
-ALU_FUNCTION_0
-ALU_FUNCTION_1
-ALU_FUNCTION_2
-ALU_FUNCTION_3
-ALU_OUT_H
-ALU_OUT_L
-ALU_IN_AL_CLK
-ALU_IN_AH_CLK
-ALU_IN_BL_CLK
-ALU_IN_BH_CLK
--SRAM_OE
--SRAM_WE
+#CONTROL UNIT SIGNALS:
+# ALU_CARRY_IN
+# ALU_MODE
+# ALU_FUNCTION (4bit)
+# ALU_OUT_H
+# ALU_OUT_L
+# ALU_IN_AL_CLK
+# ALU_IN_AH_CLK
+# ALU_IN_BL_CLK
+# ALU_IN_BH_CLK
+# CODEBANK_CLK
+# IPH_CLK
+# IPL_CLK
+# OPCODE_CLK
+# /IPH_OE
+# /IPL_OE
+# /CODEROM_OE
+# /SRAM_OE
+# /SRAM_WE
+# SRAM_RANGE_SEL(2bits)
+
+# SRAM address range selectors:
+CHANNEL_PTRS = 0
+VM_VARS = 1
+STACK = 2
+
+#byte selector
+#(for choosing the halves
+# of 16-bit values):
+HIGH_BYTE = 1
+LOW_BYTE = 0
+
+#ULA Modes:
+ARITHMETIC = 0
+LOGIC = 1
+
+#ALU arithmetic functions:
+INC_A = 0xF
+
+
+def FETCH_OPCODE():
+  SRAM_RANGE_SEL = CHANNEL_PTRS; /SRAM_OE = LOW; /CUR_CHAN_OE = LOW; SELECT_BYTE = HIGH_BYTE
+  IPH_CLK = HIGH; ALU_IN_AH_CLK = HIGH; ALU_MODE = ARITHMETIC; ALU_FUNCTION_SEL = INC_A; ALU_CARRY_IN = HIGH
+  CHANNEL_BYTE = LOW_BYTE; IPH_CLK = LOW; ALU_IN_AH_CLK = LOW
+  IPL_CLK = HIGH; ALU_IN_AL_CLK = HIGH
+  IPL_CLK = LOW; ALU_IN_AH_CLK = LOW; /SRAM_OE = HIGH; /CODEROM_OE = LOW; /CUR_CHAN_OE = HIGH
+  OPCODE_CLK = HIGH;
+  [OPCODE_CLK = LOW] #TODO: store the ULA result (incremented IP value) back into SRAM
+
+
+#################################################
+#Actual instructions implementation begins here #
+#################################################
+
+@opcode(0x00)
+def movConst():
+  FETCH_OPCODE()
+  #TODO: implement-me!
+
+@opcode(0x01)
+def mov():
+  FETCH_OPCODE()
+  #TODO: implement-me!
+
+@opcode(0x02)
+def add():
+  FETCH_OPCODE()
+  #TODO: implement-me!
+
+@opcode(0x03)
+def addConst():
+  FETCH_OPCODE()
+  #TODO: implement-me!
+
+@opcode(0x04)
+def call():
+  FETCH_OPCODE()
+  #TODO: implement-me!
+
+@opcode(0x05)
+def ret():
+  FETCH_OPCODE()
+  #TODO: implement-me!
+
+@opcode(0x06)
+def break():
+  FETCH_OPCODE()
+  #TODO: implement-me!
 
 
