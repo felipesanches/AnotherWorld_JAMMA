@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 7 8
+Sheet 6 8
 Title ""
 Date "8 aug 2016"
 Rev ""
