@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 9
+Sheet 1 8
 Title ""
 Date "8 aug 2016"
 Rev ""
@@ -46,51 +46,45 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 1700 2200 1450 350 
+S 1250 1150 1450 350 
 U 57A22D3F
 F0 "JAMMA Connector" 50
 F1 "jamma.sch" 50
 $EndSheet
 $Sheet
-S 1700 2800 1450 350 
+S 1250 1750 1450 350 
 U 57A22D68
 F0 "Instruction Decoder" 50
 F1 "instruction_decoder.sch" 50
 $EndSheet
 $Sheet
-S 1700 3400 1450 350 
+S 1250 2350 1450 350 
 U 57A248D2
 F0 "Master Clock" 50
 F1 "master_clock.sch" 50
 $EndSheet
 $Sheet
-S 1700 4000 1450 350 
-U 57A24908
-F0 "Jump Instructions Decoder" 50
-F1 "jump_decoder.sch" 50
-$EndSheet
-$Sheet
-S 1700 4600 1450 300 
-U 57A24939
-F0 "Registers" 50
-F1 "registers.sch" 50
-$EndSheet
-$Sheet
-S 1700 5100 1450 350 
+S 1250 2950 1450 350 
 U 57A2BA94
 F0 "Stack" 50
 F1 "stack.sch" 50
 $EndSheet
 $Sheet
-S 1700 5650 1450 300 
+S 1250 3500 1450 300 
 U 57A4B50B
 F0 "Arithmetic & Logic Unit" 50
 F1 "alu.sch" 50
 $EndSheet
 $Sheet
-S 1700 6200 1450 300 
+S 1250 4050 1450 300 
 U 57A82FBD
 F0 "Code ROM Banks & Instruction Pointers" 50
 F1 "code_banks.sch" 50
+$EndSheet
+$Sheet
+S 1250 4550 1450 300 
+U 57A7E619
+F0 "Microcode ROM" 50
+F1 "microcode.sch" 50
 $EndSheet
 $EndSCHEMATC
