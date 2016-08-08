@@ -1,23 +1,26 @@
-# This file is a "script" in a pseudo-language
-# that I came up with meant to specify the microcode
-# implementation for all of the CPU instructions
+# This file is a python script that specifies
+# the microcode implementation for all of the CPU instructions
+# and outputs a ROM image for the micro-instruction sequencer.
 
 #CONTROL UNIT SIGNALS:
-# ALU_CARRY_IN
-# ALU_MODE
-# ALU_FUNCTION (4bit)
-# ALU_IN_AL_CLK
-# ALU_IN_AH_CLK
-# ALU_IN_BL_CLK
-# ALU_IN_BH_CLK
-# CODEBANK_CLK
-# IPH_CLK
-# IPL_CLK
-# OPCODE_CLK
-# /SRAM_WE
-# DATABUS_SEL(3bits)
-# SRAM_RANGE_SEL(2bits)
-
+SIGNALS = \
+{
+  "ALU_CARRY_IN": {"bits": 1, "shift": 0},
+  "ALU_MODE": {"bits": 1, "shift": 1},
+  "ALU_FUNCTION": {"bits": 4, "shift": 2},
+  "ALU_IN_AL_CLK": {"bits": 1, "shift": 6},
+  "ALU_IN_AH_CLK": {"bits": 1, "shift": 7},
+  "ALU_IN_BL_CLK": {"bits": 1, "shift": 8},
+  "ALU_IN_BH_CLK": {"bits": 1, "shift": 9},
+  "CODEBANK_CLK": {"bits": 1, "shift": 10},
+  "IPH_CLK": {"bits": 1, "shift": 11},
+  "IPL_CLK": {"bits": 1, "shift": 12},
+  "OPCODE_CLK": {"bits": 1, "shift": 13},
+  "~SRAM_WE": {"bits": 1, "shift": 14},
+  "DATABUS_SEL": {"bits": 3, "shift": 15},
+  "SRAM_RANGE_SEL": {"bits": 2, "shift": 18}
+  "~CUR_CHAN_OE": {"bits": 1, "shift": 20}
+}
 
 # Databus selectors:
 CODEROM = 0
@@ -140,6 +143,14 @@ for addr in xrange(2**num_inputs):
 
   if cycle < len(OPCODE[opcode_value]):
     for signal, value in OPCODE[opcode_value][cycle]:
-      output &= ~mask[signal]
-      output |= (value << shift[signal])
+      bits = SIGNALS[signal]["bits"]
+      shift = SIGNALS[signal]["shift"]
+      output &= ~(2**(bits-1) << shift)
+      output |= (value << shift)
 
+  microcode.seek(addr*3)
+  microcode.write(chr(output & 0xFF))
+  microcode.seek(addr*3 + 1)
+  microcode.write(chr((output >> 8) & 0xFF))
+  microcode.seek(addr*3 + 2)
+  microcode.write(chr((output >> 16) & 0xFF))
