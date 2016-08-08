@@ -29,14 +29,15 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:27c801
 LIBS:anotherworld-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 8
+Sheet 1 9
 Title ""
-Date "7 aug 2016"
+Date "8 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -85,5 +86,11 @@ S 1700 5650 1450 300
 U 57A4B50B
 F0 "Arithmetic & Logic Unit" 50
 F1 "alu.sch" 50
+$EndSheet
+$Sheet
+S 1700 6200 1450 300 
+U 57A82FBD
+F0 "Code ROM Banks & Instruction Pointers" 50
+F1 "code_banks.sch" 50
 $EndSheet
 $EndSCHEMATC
