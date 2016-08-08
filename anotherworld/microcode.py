@@ -138,7 +138,11 @@ OPCODE[0x06] = \
   #TODO: implement-me!
  ]
 
-microcode = open("microcode.bin", "w")
+microcode_0 = open("ucode_0.rom", "w")
+microcode_1 = open("ucode_1.rom", "w")
+microcode_2 = open("ucode_2.rom", "w")
+microcode_3 = open("ucode_3.rom", "w")
+
 num_inputs = 20
 for addr in xrange(2**num_inputs):
   output = 0
@@ -155,9 +159,17 @@ for addr in xrange(2**num_inputs):
       output &= ~(2**(bits-1) << shift)
       output |= (value << shift)
 
-  microcode.seek(addr*3)
-  microcode.write(chr(output & 0xFF))
-  microcode.seek(addr*3 + 1)
-  microcode.write(chr((output >> 8) & 0xFF))
-  microcode.seek(addr*3 + 2)
-  microcode.write(chr((output >> 16) & 0xFF))
+  microcode_0.seek(addr)
+  microcode_0.write(chr(output & 0xFF))
+  microcode_1.seek(addr)
+  microcode_1.write(chr((output >> 8) & 0xFF))
+  microcode_2.seek(addr)
+  microcode_2.write(chr((output >> 16) & 0xFF))
+  microcode_3.seek(addr)
+  microcode_3.write(chr((output >> 24) & 0xFF))
+
+microcode_0.close()
+microcode_1.close()
+microcode_2.close()
+microcode_3.close()
+
