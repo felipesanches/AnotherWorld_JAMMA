@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title ""
-Date "8 aug 2016"
+Date "9 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -66,8 +66,8 @@ $EndSheet
 $Sheet
 S 1250 2950 1450 350 
 U 57A2BA94
-F0 "Stack" 50
-F1 "stack.sch" 50
+F0 "Static RAM (VM vars + STACK + CHAN_PTRs + SCRATCHPAD)" 50
+F1 "sram.sch" 50
 $EndSheet
 $Sheet
 S 1250 3500 1450 300 

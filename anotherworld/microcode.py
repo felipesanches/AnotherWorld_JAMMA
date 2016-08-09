@@ -2,6 +2,26 @@
 # the microcode implementation for all of the CPU instructions
 # and outputs a ROM image for the micro-instruction sequencer.
 
+# SRAM
+# Static RAM is used for several different purposes:
+# 0: As proper system RAM (To store what used to be called "VM variables")
+#    These are 256 16-bit values, so it takes 512 bytes
+# 1: To store 64 16-bit pointers keeping track of the Instruction Pointer value
+#    for each of the code execution channels.
+#    These take 128 bytes of the SRAM chip.
+# 2: To store the system stack, which is composed of 256 16-bit values
+#    So, the stake takes 512 bytes.
+# 3: With 2 bits for selection the SRAM address range, we have this extra slice of RAM
+#    which I'm tempted to exploit as useful generic scratch-pad memory for the CPU instead 
+#    of adding yet another set of TTL register IC when needed. I still have to better evaluate
+#    the effectiveness of such a hacky strategy...
+
+# SRAM address range selectors:
+CHANNEL_PTRS = 0
+VM_VARS = 1
+STACK = 2
+SCRATCHPAD = 3 # <== smells like a hack.
+
 #CONTROL UNIT SIGNALS:
 SIGNALS = \
 {
@@ -19,8 +39,15 @@ SIGNALS = \
   "~SRAM_WE": {"bits": 1, "shift": 14},
   "DATABUS_SEL": {"bits": 3, "shift": 15},
   "SRAM_RANGE_SEL": {"bits": 2, "shift": 18},
-  "~CUR_CHAN_OE": {"bits": 1, "shift": 20},
-  "SELECT_BYTE": {"bits": 1, "shift": 21}
+  "~CURRENT_CHANNEL_OE": {"bits": 1, "shift": 20},
+  "BYTE_SELECT": {"bits": 1, "shift": 21},
+  "CYCLE_COUNTER_RESET": {"bits": 1, "shift": 22},
+  "CYCLE_COUNTER_INC": {"bits": 1, "shift": 23},
+  "STACK_POINTER_RESET": {"bits": 1, "shift": 24},
+  "STACK_POINTER_INC": {"bits": 1, "shift": 25},
+  "STACK_POINTER_DEC": {"bits": 1, "shift": 26},
+  "CURRENT_CHANNEL_RESET": {"bits": 1, "shift": 27},
+  "CURRENT_CHANNEL_INC": {"bits": 1, "shift": 28}
 }
 
 # Databus selectors:
@@ -30,11 +57,6 @@ IPH = 2
 IPL = 3
 ALU_OUT_H = 4
 ALU_OUT_L = 5
-
-# SRAM address range selectors:
-CHANNEL_PTRS = 0
-VM_VARS = 1
-STACK = 2
 
 #byte selector
 #(for choosing the halves
@@ -58,7 +80,7 @@ FETCH_OPCODE = \
  [  ("SRAM_RANGE_SEL", CHANNEL_PTRS),
        ("DATABUS_SEL", SRAM),
       ("~CUR_CHAN_OE", LOW),
-       ("SELECT_BYTE", HIGH_BYTE)
+       ("BYTE_SELECT", HIGH_BYTE)
  ],
  [         ("IPH_CLK", HIGH),
      ("ALU_IN_AH_CLK", HIGH),
@@ -66,7 +88,7 @@ FETCH_OPCODE = \
   ("ALU_FUNCTION_SEL", INC_A),
       ("ALU_CARRY_IN", HIGH)
  ],
- [     ("SELECT_BYTE", LOW_BYTE),
+ [     ("BYTE_SELECT", LOW_BYTE),
            ("IPH_CLK", LOW),
      ("ALU_IN_AH_CLK", LOW)
  ],

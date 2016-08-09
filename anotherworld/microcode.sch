@@ -37,7 +37,7 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 8 8
 Title ""
-Date "8 aug 2016"
+Date "9 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -487,9 +487,9 @@ Wire Wire Line
 Wire Wire Line
 	12550 8850 12550 8200
 Text GLabel 12950 9000 2    60   Output ~ 0
--CUR_CHAN_OE
+-CURRENT_CHANNEL_OE
 Text GLabel 12950 9150 2    60   Output ~ 0
-SELECT_BYTE
+BYTE_SELECT
 Wire Wire Line
 	12950 9000 12450 9000
 Wire Wire Line
