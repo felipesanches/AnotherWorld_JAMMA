@@ -36,9 +36,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 6 7
+Sheet 6 8
 Title ""
-Date "9 aug 2016"
+Date "10 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -143,7 +143,7 @@ ALU_IN_BH_CLK
 Text GLabel 14950 9850 2    60   Output ~ 0
 ALU_IN_BL_CLK
 Text GLabel 14950 10150 2    60   Output ~ 0
-CODEBANK_CLK
+RESOURCE_BANK_CLK
 Text GLabel 14950 10300 2    60   Output ~ 0
 IPL_CLK
 Text GLabel 14950 10450 2    60   Output ~ 0

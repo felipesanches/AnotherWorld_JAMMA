@@ -36,9 +36,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title ""
-Date "9 aug 2016"
+Date "10 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -90,4 +90,10 @@ Text Notes 1350 4900 0    60   ~ 0
 * Microcode ROMs\n* Opcode Register
 Text Notes 1350 3600 0    60   ~ 0
 * 16bit ALU\n* ALU Input Registers\n* ALU Output Latches
+$Sheet
+S 3100 3800 1450 350 
+U 57AAB07E
+F0 "Video Signal Output" 50
+F1 "video_output.sch" 50
+$EndSheet
 $EndSCHEMATC
