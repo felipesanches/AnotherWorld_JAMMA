@@ -1,4 +1,4 @@
-update=Dom 07 Ago 2016 21:38:35 BRT
+update=Ter 09 Ago 2016 12:44:28 BRT
 version=1
 last_client=eeschema
 [cvpcb]
@@ -85,3 +85,4 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=27c801
+LibName32=o_ttl

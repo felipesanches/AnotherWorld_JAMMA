@@ -69,7 +69,13 @@ ARITHMETIC = 0
 LOGIC = 1
 
 #ALU arithmetic functions:
+DEC_A = 0x0
 INC_A = 0xF
+A_OR_B = 0xB
+A_AND_B = 0xE
+A_PLUS_B = 0x9
+A_MINUS_B = 0x6
+LOGIC_ZERO = 0xC
 
 # helper define:
 HIGH = 1
@@ -77,38 +83,39 @@ LOW = 0
 
 FETCH_OPCODE = \
 [
- [  ("SRAM_RANGE_SEL", CHANNEL_PTRS),
-       ("DATABUS_SEL", SRAM),
-      ("~CUR_CHAN_OE", LOW),
-       ("BYTE_SELECT", HIGH_BYTE)
+ [      ("SRAM_RANGE_SEL", CHANNEL_PTRS),
+           ("DATABUS_SEL", SRAM),
+   ("~CURRENT_CHANNEL_OE", LOW),
+           ("BYTE_SELECT", HIGH_BYTE)
  ],
- [         ("IPH_CLK", HIGH),
-     ("ALU_IN_AH_CLK", HIGH),
-          ("ALU_MODE", ARITHMETIC),
-  ("ALU_FUNCTION_SEL", INC_A),
-      ("ALU_CARRY_IN", HIGH)
+ [             ("IPH_CLK", HIGH),
+         ("ALU_IN_AH_CLK", HIGH),
+              ("ALU_MODE", ARITHMETIC),
+      ("ALU_FUNCTION_SEL", INC_A),
+          ("ALU_CARRY_IN", HIGH)
  ],
- [     ("BYTE_SELECT", LOW_BYTE),
-           ("IPH_CLK", LOW),
-     ("ALU_IN_AH_CLK", LOW)
+ [         ("BYTE_SELECT", LOW_BYTE),
+               ("IPH_CLK", LOW), #restore
+         ("ALU_IN_AH_CLK", LOW)  #restore
  ],
- [         ("IPL_CLK", HIGH),
-     ("ALU_IN_AL_CLK", HIGH)
+ [             ("IPL_CLK", HIGH),
+         ("ALU_IN_AL_CLK", HIGH)
  ],
- [         ("IPL_CLK", LOW),
-     ("ALU_IN_AH_CLK", LOW),
-       ("DATABUS_SEL", CODEROM),
-      ("~CUR_CHAN_OE", HIGH)
+ [             ("IPL_CLK", LOW), #restore
+         ("ALU_IN_AH_CLK", LOW), #restore
+           ("DATABUS_SEL", CODEROM),
+   ("~CURRENT_CHANNEL_OE", HIGH) #restore
  ],
- [      ("OPCODE_CLK", HIGH)
+ [          ("OPCODE_CLK", HIGH)
  ],
- [      ("OPCODE_CLK", LOW) #TODO: store the ULA result (incremented IP value) back into SRAM
+ [          ("OPCODE_CLK", LOW) #restore
+   #TODO: store the ULA result (incremented IP value) back into SRAM
  ]
 ]
 
-#################################################
-#Actual instructions implementation begins here #
-#################################################
+##################################################
+# Actual instructions implementation begins here #
+##################################################
 OPCODE = {}
 
 # movConst
@@ -165,11 +172,11 @@ microcode_1 = open("ucode_1.rom", "w")
 microcode_2 = open("ucode_2.rom", "w")
 microcode_3 = open("ucode_3.rom", "w")
 
-num_inputs = 20
+num_inputs = 16
 for addr in xrange(2**num_inputs):
   output = 0
   opcode_value = (addr >> 0) & 255
-  cycle = (addr >> 8) & 31
+  cycle = (addr >> 8) & 255
 
   if opcode_value > 6:
     continue  # we havent yet specified these instructions

@@ -30,12 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:27c801
+LIBS:o_ttl
 LIBS:anotherworld-cache
 EELAYER 27 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 7 8
+Sheet 7 7
 Title ""
 Date "9 aug 2016"
 Rev ""
