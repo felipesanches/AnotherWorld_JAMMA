@@ -34,11 +34,11 @@ LIBS:o_ttl
 LIBS:anotherworld-cache
 EELAYER 27 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A2 23386 16535
 encoding utf-8
-Sheet 1 8
+Sheet 2 8
 Title ""
-Date "10 aug 2016"
+Date "11 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
