@@ -1,4 +1,4 @@
-update=Ter 09 Ago 2016 12:44:28 BRT
+update=Ter 16 Ago 2016 02:56:22 BRT
 version=1
 last_client=eeschema
 [cvpcb]
@@ -52,7 +52,7 @@ NetFmtName=
 RptD_X=0
 RptD_Y=100
 RptLab=1
-LabSize=60
+LabSize=197
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -86,3 +86,4 @@ LibName29=contrib
 LibName30=valves
 LibName31=27c801
 LibName32=o_ttl
+LibName33=jamma_connector

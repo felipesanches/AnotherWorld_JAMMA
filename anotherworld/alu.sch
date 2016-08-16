@@ -31,6 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:27c801
 LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 27 0
 EELAYER END
@@ -38,7 +39,7 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 5 8
 Title ""
-Date "12 aug 2016"
+Date "16 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
