@@ -39,7 +39,7 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 7 8
 Title ""
-Date "16 aug 2016"
+Date "17 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -924,7 +924,7 @@ Text Notes 16950 1350 0    118  ~ 0
 VSyncEnd = 202
 Text GLabel 17150 1550 0    60   Input ~ 0
 2V
-Text GLabel 9350 13100 0    60   Input ~ 0
+Text GLabel 8050 13000 0    60   Input ~ 0
 HBLANK
 $Comp
 L GND #PWR?
@@ -1524,7 +1524,9 @@ Wire Wire Line
 Wire Wire Line
 	20200 2600 20400 2600
 Wire Wire Line
-	18500 1650 18850 1650
+	18500 1650 18650 1650
+Wire Wire Line
+	18650 1650 18850 1650
 Connection ~ 20200 2600
 Connection ~ 20200 1750
 Wire Wire Line
@@ -1793,7 +1795,7 @@ F 3 "~" H 17200 4200 60  0000 C CNN
 $EndComp
 Text GLabel 19550 3850 2    60   Output ~ 0
 VRESET
-Text Notes 16300 3400 0    118  ~ 0
+Text Notes 16550 3800 0    118  ~ 0
 VTotal = 222
 $Comp
 L 74LS08 U?
@@ -1812,8 +1814,6 @@ Wire Wire Line
 	16450 4300 16600 4300
 Wire Wire Line
 	18100 4200 17800 4200
-Wire Wire Line
-	17950 4000 18100 4000
 Wire Wire Line
 	19300 4100 19450 4100
 Wire Wire Line
@@ -2003,10 +2003,8 @@ Text GLabel 19650 5400 2    60   Output ~ 0
 200V
 Text GLabel 17900 2700 0    60   Input ~ 0
 200V
-Text GLabel 16400 3600 0    60   Input ~ 0
-200V
-Wire Wire Line
-	17950 3700 17950 4000
+Text GLabel 17800 4000 0    60   Input ~ 0
+202V
 Wire Wire Line
 	17900 2700 18850 2700
 Text Notes 16950 2550 0    118  ~ 0
@@ -2014,25 +2012,6 @@ VSyncStart = 200
 Wire Wire Line
 	19450 5400 19450 5150
 Connection ~ 19450 5150
-$Comp
-L 74LS08 U?
-U 1 1 57B2AFD0
-P 17200 3700
-F 0 "U?" H 17200 3750 60  0000 C CNN
-F 1 "74LS08" H 17200 3650 60  0000 C CNN
-F 2 "~" H 17200 3700 60  0000 C CNN
-F 3 "~" H 17200 3700 60  0000 C CNN
-	1    17200 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	17950 3700 17800 3700
-Text GLabel 16400 3800 0    60   Input ~ 0
-2V
-Wire Wire Line
-	16600 3800 16400 3800
-Wire Wire Line
-	16400 3600 16600 3600
 Text Notes 10900 7650 0    197  ~ 0
 ?????
 Wire Notes Line
@@ -2093,19 +2072,30 @@ Wire Notes Line
 	4350 13100 4350 11300
 Wire Notes Line
 	4350 11300 2150 11300
-Text GLabel 23950 3750 2    60   Output ~ 0
+Text GLabel 8050 13200 0    60   Input ~ 0
 VBLANK
-Text GLabel 23900 3550 2    60   Output ~ 0
-VSYNC
+Wire Wire Line
+	8150 13000 8050 13000
+Wire Wire Line
+	8050 13200 8150 13200
 $Comp
-L +5V #PWR?
-U 1 1 57B2DE43
-P 24100 3250
-F 0 "#PWR?" H 24100 3340 20  0001 C CNN
-F 1 "+5V" H 24100 3340 30  0000 C CNN
-F 2 "" H 24100 3250 60  0000 C CNN
-F 3 "" H 24100 3250 60  0000 C CNN
-	1    24100 3250
+L 74LS32 U?
+U 1 1 57B3BEE4
+P 8750 13100
+F 0 "U?" H 8750 13150 60  0000 C CNN
+F 1 "74LS32" H 8750 13050 60  0000 C CNN
+F 2 "~" H 8750 13100 60  0000 C CNN
+F 3 "~" H 8750 13100 60  0000 C CNN
+	1    8750 13100
 	1    0    0    -1  
 $EndComp
+Text GLabel 18750 1450 2    60   Output ~ 0
+202V
+Wire Wire Line
+	18750 1450 18650 1450
+Wire Wire Line
+	18650 1450 18650 1650
+Connection ~ 18650 1650
+Wire Wire Line
+	18100 4000 17800 4000
 $EndSCHEMATC

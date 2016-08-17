@@ -39,7 +39,7 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 2 8
 Title ""
-Date "16 aug 2016"
+Date "17 aug 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -54,7 +54,7 @@ GREEN
 Text GLabel 12950 7600 2    60   Input ~ 0
 BLUE
 Text GLabel 9700 7600 0    60   Input ~ 0
-VSYNC
+SYNC
 $Comp
 L +5V #PWR?
 U 1 1 57B2DE52
