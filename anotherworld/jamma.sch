@@ -33,7 +33,7 @@ LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -155,13 +155,7 @@ NoConn ~ 10250 7200
 NoConn ~ 12750 7200
 NoConn ~ 10250 7800
 NoConn ~ 10250 7900
-NoConn ~ 10250 8000
-NoConn ~ 10250 8100
-NoConn ~ 10250 8200
-NoConn ~ 10250 8300
-NoConn ~ 10250 8400
 NoConn ~ 10250 8500
-NoConn ~ 10250 8600
 NoConn ~ 10250 8700
 Wire Wire Line
 	12750 8500 12900 8500
@@ -221,7 +215,7 @@ F 3 "" H 12850 9300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12850 9300 12850 9000
+	12850 9000 12850 9300
 Wire Wire Line
 	12850 9000 12750 9000
 Wire Wire Line
@@ -239,10 +233,17 @@ F 3 "" H 10150 9300 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10150 9300 10150 9000
+	10150 9000 10150 9300
 Wire Wire Line
 	10150 9000 10250 9000
 Wire Wire Line
 	10250 9100 10150 9100
 Connection ~ 10150 9100
+NoConn ~ 10250 8600
+NoConn ~ 10250 8400
+NoConn ~ 10250 8300
+NoConn ~ 10250 8200
+NoConn ~ 10250 8100
+NoConn ~ 10250 8000
+NoConn ~ 10250 7700
 $EndSCHEMATC

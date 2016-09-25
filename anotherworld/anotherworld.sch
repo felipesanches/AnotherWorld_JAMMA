@@ -33,7 +33,7 @@ LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -77,13 +77,13 @@ U 57A7E619
 F0 "Microcode Sequencer" 236
 F1 "microcode.sch" 236
 $EndSheet
-Text Notes 3950 3250 0    197  ~ 0
+Text Notes 4000 4050 0    197  ~ 0
 * Stack area\n* Channel Pointers\n* "VM" vars (i.e. system RAM)\n* Scratchpad area
-Text Notes 3900 9850 0    197  ~ 0
+Text Notes 3950 10450 0    197  ~ 0
 * Code ROM\n* Instruction Pointer Register\n* ROM Bank Register
-Text Notes 4000 12950 0    197  ~ 0
+Text Notes 4000 13300 0    197  ~ 0
 * Microcode ROMs\n* Opcode Register
-Text Notes 3900 6700 0    197  ~ 0
+Text Notes 4000 7300 0    197  ~ 0
 * 16bit ALU\n* ALU Input Registers\n* ALU Output Latches
 $Sheet
 S 12950 9350 6700 1350
