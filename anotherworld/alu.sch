@@ -1,39 +1,10 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+LIBS:anotherworld-rescue
 LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -48,7 +19,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 74LS181 U?
+L 74LS181-RESCUE-anotherworld U?
 U 1 1 57A4B525
 P 8800 10250
 F 0 "U?" H 9060 11050 60  0000 C CNN
@@ -59,7 +30,7 @@ F 3 "~" H 8800 10250 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS181 U?
+L 74LS181-RESCUE-anotherworld U?
 U 1 1 57A4B896
 P 11000 10250
 F 0 "U?" H 11260 11050 60  0000 C CNN
@@ -70,7 +41,7 @@ F 3 "~" H 11000 10250 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS181 U?
+L 74LS181-RESCUE-anotherworld U?
 U 1 1 57A4B8B0
 P 13200 10250
 F 0 "U?" H 13460 11050 60  0000 C CNN
@@ -81,7 +52,7 @@ F 3 "~" H 13200 10250 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS181 U?
+L 74LS181-RESCUE-anotherworld U?
 U 1 1 57A4B8B6
 P 15400 10250
 F 0 "U?" H 15660 11050 60  0000 C CNN
@@ -104,7 +75,7 @@ ALU_MODE
 Text GLabel 7600 9250 0    60   Input ~ 0
 ALU_CARRY_IN
 $Comp
-L 74LS245 U?
+L 74LS245-RESCUE-anotherworld U?
 U 1 1 57A4E7D3
 P 17000 12050
 F 0 "U?" H 17100 12625 60  0000 L BNN
@@ -115,7 +86,7 @@ F 3 "~" H 17000 12050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS245 U?
+L 74LS245-RESCUE-anotherworld U?
 U 1 1 57A4E7E0
 P 17000 13550
 F 0 "U?" H 17100 14125 60  0000 L BNN
@@ -181,7 +152,7 @@ F 3 "" H 16200 12700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A7AC01
 P 5200 5350
 F 0 "U?" H 5350 5100 60  0000 C CNN
@@ -192,7 +163,7 @@ F 3 "~" H 5200 5350 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A7B105
 P 6450 5350
 F 0 "U?" H 6600 5100 60  0000 C CNN
@@ -203,7 +174,7 @@ F 3 "~" H 6450 5350 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A7B6CE
 P 7850 4300
 F 0 "U?" H 8000 4050 60  0000 C CNN
@@ -214,7 +185,7 @@ F 3 "~" H 7850 4300 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A7B6E0
 P 9100 4300
 F 0 "U?" H 9250 4050 60  0000 C CNN

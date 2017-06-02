@@ -1,39 +1,10 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+LIBS:anotherworld-rescue
 LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -48,7 +19,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A82FC5
 P 13200 6250
 F 0 "U?" H 13100 5900 60  0000 C CNN
@@ -169,7 +140,7 @@ Wire Wire Line
 Text GLabel 9200 7550 0    60   Input ~ 0
 IPL_CLK
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A82FD7
 P 11900 6250
 F 0 "U?" H 11800 5900 60  0000 C CNN
@@ -182,7 +153,7 @@ $EndComp
 Wire Wire Line
 	12700 6950 12700 7050
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A84059
 P 10600 6250
 F 0 "U?" H 10500 5900 60  0000 C CNN

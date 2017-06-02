@@ -1,39 +1,10 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+LIBS:anotherworld-rescue
 LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -92,7 +63,7 @@ F 3 "" H 15400 8050 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A7EB1A
 P 6700 6450
 F 0 "U?" H 6700 6450 60  0000 C CNN
@@ -214,7 +185,7 @@ ALU_OUT_H
 Text GLabel 9000 13700 2    60   Output ~ 0
 ALU_OUT_L
 $Comp
-L 74HC04 U?
+L 74HC04-RESCUE-anotherworld U?
 U 1 1 57A8AE99
 P 8350 13500
 F 0 "U?" H 8500 13600 40  0000 C CNN
@@ -225,7 +196,7 @@ F 3 "~" H 8350 13500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC04 U?
+L 74HC04-RESCUE-anotherworld U?
 U 1 1 57A8AF2C
 P 7650 13700
 F 0 "U?" H 7800 13800 40  0000 C CNN
@@ -304,7 +275,7 @@ NoConn ~ 9850 9650
 NoConn ~ 9750 9650
 NoConn ~ 9650 9650
 $Comp
-L 74LS138 U?
+L 74LS138-RESCUE-anotherworld U?
 U 1 1 57A8CB1F
 P 7200 12100
 F 0 "U?" H 7300 12600 60  0000 C CNN
@@ -315,7 +286,7 @@ F 3 "~" H 7200 12100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS161 U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57AA2BDB
 P 9450 3600
 F 0 "U?" H 9700 3300 60  0000 C CNN
@@ -326,7 +297,7 @@ F 3 "~" H 9450 3600 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS161 U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57AA2C03
 P 8050 3600
 F 0 "U?" H 8300 3300 60  0000 C CNN

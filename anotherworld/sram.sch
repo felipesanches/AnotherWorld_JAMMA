@@ -1,39 +1,10 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+LIBS:anotherworld-rescue
 LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -92,7 +63,7 @@ F 3 "" H 8300 9400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A95F2B
 P 9250 6850
 F 0 "U?" H 9350 6550 60  0000 C CNN
@@ -179,9 +150,11 @@ CHANNEL_COUNTER_FUNCTION_0
 Text GLabel 14700 6050 0    60   Input ~ 0
 CHANNEL_COUNTER_FUNCTION_1
 $Comp
-L 74LS139 U?
+L 74LS139-RESCUE-anotherworld U?
 U 1 1 57A97549
 P 14000 11100
+AR Path="/57A97549" Ref="U?"  Part="1" 
+AR Path="/57A2BA94/57A97549" Ref="U?"  Part="1" 
 F 0 "U?" H 14000 11200 60  0000 C CNN
 F 1 "74LS139" H 14000 11000 60  0000 C CNN
 F 2 "~" H 14000 11100 60  0000 C CNN

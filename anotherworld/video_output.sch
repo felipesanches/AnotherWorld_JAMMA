@@ -1,39 +1,10 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+LIBS:anotherworld-rescue
 LIBS:27c801
 LIBS:o_ttl
 LIBS:jamma_connector
 LIBS:anotherworld-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -581,7 +552,7 @@ RESOURCE_BANK_1
 Text GLabel 10050 11600 0    60   Input ~ 0
 RESOURCE_BANK_0
 $Comp
-L 74LS374 U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57AAD507
 P 8200 11400
 F 0 "U?" H 8350 11100 60  0000 C CNN
@@ -623,7 +594,7 @@ DATA_4
 Text GLabel 7400 9350 0    60   Input ~ 0
 DATA_5
 $Comp
-L 74LS161 U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57ACD7A3
 P 3300 3100
 F 0 "U?" H 3350 3200 60  0000 C CNN
@@ -634,7 +605,7 @@ F 3 "~" H 3300 3100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS161 U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57ACD7B0
 P 5050 3100
 F 0 "U?" H 5100 3200 60  0000 C CNN
@@ -645,7 +616,7 @@ F 3 "~" H 5050 3100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 74LS93 U?
+L 74LS93-RESCUE-anotherworld U?
 U 1 1 57ACD7D2
 P 4000 6250
 F 0 "U?" H 4050 6100 60  0000 C CNN
@@ -656,7 +627,7 @@ F 3 "~" H 4000 6250 60  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L 74LS93 U?
+L 74LS93-RESCUE-anotherworld U?
 U 1 1 57ACD7FA
 P 5200 6250
 F 0 "U?" H 5250 6100 60  0000 C CNN
@@ -667,7 +638,7 @@ F 3 "~" H 5200 6250 60  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L 74LS93 U?
+L 74LS93-RESCUE-anotherworld U?
 U 1 1 57ACD800
 P 6400 6250
 F 0 "U?" H 6450 6100 60  0000 C CNN
@@ -698,9 +669,11 @@ Text GLabel 6500 7350 2    60   Output ~ 0
 NoConn ~ 6300 7000
 NoConn ~ 6400 7000
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 4 1 57ACED17
 P 19450 1750
+AR Path="/57ACED17" Ref="U?"  Part="4" 
+AR Path="/57AAB07E/57ACED17" Ref="U?"  Part="4" 
 F 0 "U?" H 19450 1800 60  0000 C CNN
 F 1 "7402" H 19500 1700 60  0000 C CNN
 F 2 "~" H 19450 1750 60  0000 C CNN
@@ -709,9 +682,11 @@ F 3 "~" H 19450 1750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57ACED24
 P 19450 2600
+AR Path="/57ACED24" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57ACED24" Ref="U?"  Part="1" 
 F 0 "U?" H 19450 2650 60  0000 C CNN
 F 1 "7402" H 19500 2550 60  0000 C CNN
 F 2 "~" H 19450 2600 60  0000 C CNN
@@ -728,9 +703,11 @@ Text GLabel 16450 5150 0    60   Input ~ 0
 Text GLabel 17950 5050 0    60   Input ~ 0
 128V
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 2 1 57AD00E1
 P 18700 5150
+AR Path="/57AD00E1" Ref="U?"  Part="2" 
+AR Path="/57AAB07E/57AD00E1" Ref="U?"  Part="2" 
 F 0 "U?" H 18700 5200 60  0000 C CNN
 F 1 "74LS08" H 18700 5100 60  0000 C CNN
 F 2 "~" H 18700 5150 60  0000 C CNN
@@ -743,9 +720,11 @@ Text GLabel 10550 3100 0    60   Input ~ 0
 Text GLabel 10550 2900 0    60   Input ~ 0
 128H
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57AD41D2
 P 11300 3000
+AR Path="/57AD41D2" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57AD41D2" Ref="U?"  Part="1" 
 F 0 "U?" H 11300 3050 60  0000 C CNN
 F 1 "74LS08" H 11300 2950 60  0000 C CNN
 F 2 "~" H 11300 3000 60  0000 C CNN
@@ -772,9 +751,11 @@ Text GLabel 5700 4350 2    60   Output ~ 0
 Text GLabel 5700 4500 2    60   Output ~ 0
 16H
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57AD5942
 P 12550 1200
+AR Path="/57AD5942" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57AD5942" Ref="U?"  Part="1" 
 F 0 "U?" H 12550 1250 60  0000 C CNN
 F 1 "7402" H 12600 1150 60  0000 C CNN
 F 2 "~" H 12550 1200 60  0000 C CNN
@@ -783,9 +764,11 @@ F 3 "~" H 12550 1200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57AD5948
 P 12550 2050
+AR Path="/57AD5948" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57AD5948" Ref="U?"  Part="1" 
 F 0 "U?" H 12550 2100 60  0000 C CNN
 F 1 "7402" H 12600 2000 60  0000 C CNN
 F 2 "~" H 12550 2050 60  0000 C CNN
@@ -802,9 +785,11 @@ HBLANK
 Text GLabel 2250 2250 0    60   Input ~ 0
 -HRESET
 $Comp
-L 74LS86 U?
+L 74LS86-RESCUE-anotherworld U?
 U 2 1 57AD6F39
 P 11300 7950
+AR Path="/57AD6F39" Ref="U?"  Part="2" 
+AR Path="/57AAB07E/57AD6F39" Ref="U?"  Part="2" 
 F 0 "U?" H 11350 8000 50  0000 C CNN
 F 1 "74LS86" H 11350 7900 40  0000 C CNN
 F 2 "~" H 11300 7950 60  0000 C CNN
@@ -817,9 +802,11 @@ COMP_SYNC
 Text GLabel 13250 8250 2    60   Output ~ 0
 -COMP_SYNC
 $Comp
-L 74HC04 U?
+L 74HC04-RESCUE-anotherworld U?
 U 1 1 57AD729C
 P 12650 8250
+AR Path="/57AD729C" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57AD729C" Ref="U?"  Part="1" 
 F 0 "U?" H 12800 8350 40  0000 C CNN
 F 1 "74HC04" H 12850 8150 40  0000 C CNN
 F 2 "~" H 12650 8250 60  0000 C CNN
@@ -830,9 +817,11 @@ $EndComp
 Text GLabel 10500 8050 0    60   Input ~ 0
 VSYNC
 $Comp
-L 74LS107 U?
+L 74LS107-RESCUE-anotherworld U?
 U 1 1 57AD7A10
 P 6800 3100
+AR Path="/57AD7A10" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57AD7A10" Ref="U?"  Part="1" 
 F 0 "U?" H 6800 3200 60  0000 C CNN
 F 1 "74LS107" H 6800 3000 60  0000 C CNN
 F 2 "~" H 6800 3100 60  0000 C CNN
@@ -867,9 +856,11 @@ NoConn ~ 5450 2400
 NoConn ~ 5550 2400
 NoConn ~ 5050 2400
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B20A82
 P 11150 2150
+AR Path="/57B20A82" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B20A82" Ref="U?"  Part="1" 
 F 0 "U?" H 11150 2200 60  0000 C CNN
 F 1 "74LS08" H 11150 2100 60  0000 C CNN
 F 2 "~" H 11150 2150 60  0000 C CNN
@@ -884,9 +875,11 @@ HRes = 320
 Text Notes 10900 3450 0    118  ~ 0
 HTotal = 416
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B20DB7
 P 12700 2900
+AR Path="/57B20DB7" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B20DB7" Ref="U?"  Part="1" 
 F 0 "U?" H 12700 2950 60  0000 C CNN
 F 1 "74LS08" H 12700 2850 60  0000 C CNN
 F 2 "~" H 12700 2900 60  0000 C CNN
@@ -897,9 +890,11 @@ $EndComp
 Text GLabel 12000 2800 0    60   Input ~ 0
 256H
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B21509
 P 17200 5250
+AR Path="/57B21509" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B21509" Ref="U?"  Part="1" 
 F 0 "U?" H 17200 5300 60  0000 C CNN
 F 1 "74LS08" H 17200 5200 60  0000 C CNN
 F 2 "~" H 17200 5250 60  0000 C CNN
@@ -910,9 +905,11 @@ $EndComp
 Text GLabel 16450 5350 0    60   Input ~ 0
 8V
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B21878
 P 17900 1650
+AR Path="/57B21878" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B21878" Ref="U?"  Part="1" 
 F 0 "U?" H 17900 1700 60  0000 C CNN
 F 1 "74LS08" H 17900 1600 60  0000 C CNN
 F 2 "~" H 17900 1650 60  0000 C CNN
@@ -1607,9 +1604,11 @@ Wire Wire Line
 	11950 13100 11950 13300
 Connection ~ 9700 13100
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B22C92
 P 20250 4200
+AR Path="/57B22C92" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B22C92" Ref="U?"  Part="1" 
 F 0 "U?" H 20250 4250 60  0000 C CNN
 F 1 "7402" H 20300 4150 60  0000 C CNN
 F 2 "~" H 20250 4200 60  0000 C CNN
@@ -1618,9 +1617,11 @@ F 3 "~" H 20250 4200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B22C98
 P 20250 5050
+AR Path="/57B22C98" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B22C98" Ref="U?"  Part="1" 
 F 0 "U?" H 20250 5100 60  0000 C CNN
 F 1 "7402" H 20300 5000 60  0000 C CNN
 F 2 "~" H 20250 5050 60  0000 C CNN
@@ -1659,9 +1660,11 @@ Text GLabel 16450 4300 0    60   Input ~ 0
 Text GLabel 16450 4100 0    60   Input ~ 0
 16H
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B2320B
 P 17200 4200
+AR Path="/57B2320B" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B2320B" Ref="U?"  Part="1" 
 F 0 "U?" H 17200 4250 60  0000 C CNN
 F 1 "74LS08" H 17200 4150 60  0000 C CNN
 F 2 "~" H 17200 4200 60  0000 C CNN
@@ -1674,9 +1677,11 @@ VRESET
 Text Notes 16550 3800 0    118  ~ 0
 VTotal = 222
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B23213
 P 18700 4100
+AR Path="/57B23213" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B23213" Ref="U?"  Part="1" 
 F 0 "U?" H 18700 4150 60  0000 C CNN
 F 1 "74LS08" H 18700 4050 60  0000 C CNN
 F 2 "~" H 18700 4100 60  0000 C CNN
@@ -1756,9 +1761,11 @@ Text GLabel 7650 3350 2    60   Output ~ 0
 Wire Wire Line
 	7650 3350 7450 3350
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B29E2D
 P 12700 4450
+AR Path="/57B29E2D" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B29E2D" Ref="U?"  Part="1" 
 F 0 "U?" H 12700 4500 60  0000 C CNN
 F 1 "7402" H 12750 4400 60  0000 C CNN
 F 2 "~" H 12700 4450 60  0000 C CNN
@@ -1767,9 +1774,11 @@ F 3 "~" H 12700 4450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7402 U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B29E33
 P 12700 5300
+AR Path="/57B29E33" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B29E33" Ref="U?"  Part="1" 
 F 0 "U?" H 12700 5350 60  0000 C CNN
 F 1 "7402" H 12750 5250 60  0000 C CNN
 F 2 "~" H 12700 5300 60  0000 C CNN
@@ -1812,9 +1821,11 @@ Wire Wire Line
 Text GLabel 10500 4250 0    60   Input ~ 0
 336H
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B29E67
 P 11300 4350
+AR Path="/57B29E67" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B29E67" Ref="U?"  Part="1" 
 F 0 "U?" H 11300 4400 60  0000 C CNN
 F 1 "74LS08" H 11300 4300 60  0000 C CNN
 F 2 "~" H 11300 4350 60  0000 C CNN
@@ -1829,9 +1840,11 @@ Wire Wire Line
 Wire Wire Line
 	10500 4450 10700 4450
 $Comp
-L 74LS08 U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B2A01A
 P 11300 5400
+AR Path="/57B2A01A" Ref="U?"  Part="1" 
+AR Path="/57AAB07E/57B2A01A" Ref="U?"  Part="1" 
 F 0 "U?" H 11300 5450 60  0000 C CNN
 F 1 "74LS08" H 11300 5350 60  0000 C CNN
 F 2 "~" H 11300 5400 60  0000 C CNN
@@ -1945,7 +1958,7 @@ Wire Wire Line
 Wire Wire Line
 	8050 13200 8150 13200
 $Comp
-L 74LS32 U?
+L 74LS32-RESCUE-anotherworld U?
 U 1 1 57B3BEE4
 P 8750 13100
 F 0 "U?" H 8750 13150 60  0000 C CNN
