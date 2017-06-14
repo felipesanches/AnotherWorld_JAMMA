@@ -794,9 +794,10 @@ void execute_instruction(){
     log_error("Unimplemented opcode!\n");
 }
 
-void main(){
-  vm_init();
-  while(TRUE){
+void init_system(){
+    vm_init();
+}
+
+void main_loop(){
     execute_instruction();
-  }
 }

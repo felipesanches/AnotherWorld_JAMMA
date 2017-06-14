@@ -1,10 +1,10 @@
 CC      = sdcc
-CFLAGS  = -mz80 --code-loc 0x0080 --data-loc 0x0000
+CFLAGS  = -mz80 --code-loc 0x0080 --data-loc 0x0000 --no-std-crt0
 
 rom     = anotherworld_maincpu.rom
 romsize = 65536
 
-objs    = anotherworld_maincpu.rel
+objs    = anotherworld_maincpu.rel boot.rel
 
 
 .PHONY: all
@@ -12,6 +12,9 @@ all: $(rom)
 
 $(rom:.rom=.ihx): $(objs)
 	$(CC) $(CFLAGS) -o $@ $(objs)
+
+boot.rel: boot.s
+	sdasz80 -o boot.s
 
 .PHONY: clean
 clean:
@@ -30,6 +33,9 @@ clean:
 .PHONY: run
 run: anotherw/anotherworld_maincpu.rom
 	~/mame/another64 -rp . anotherw
+
+debug: anotherw/anotherworld_maincpu.rom
+	~/mame/another64 -rp . anotherw -debug -window
 
 anotherw/anotherworld_maincpu.rom: $(rom)
 	install -D -m644 $(rom) $@
