@@ -4,6 +4,7 @@
  ***********************/
 void input_updatePlayer();
 void vm_init();
+void init_threads();
 
 /************
  * VM Hacks *
@@ -14,16 +15,24 @@ void vm_init();
 /**************
  * MEMORY MAP *
  **************/
-#define BUTTONS                  0x8000
-#define KEYBOARD                 0x8001
-#define FETCH_BYTE               0x8002
-#define SET_INSTRUCTION_POINTER  0x8002
-#define SWITCH_LEVEL_BANK        0x8003
-#define SOUND_LATCH              0x8004
-#define VIDEO_LATCH              0x8005
-#define MUS_MARK                 0x8006
-#define SET_PALETTE              0x8007
-#define VM_VARS                  0x9000
+#define SET_INSTRUCTION_POINTER_LOW   0x8000
+#define SET_INSTRUCTION_POINTER_HIGH  0x8001
+#define FETCH_BYTE                    0x8002
+#define BUTTONS                       0x8003
+#define KEYBOARD                      0x8004
+#define SWITCH_LEVEL_BANK             0x8005
+#define SOUND_LATCH                   0x8006
+#define VIDEO_LATCH                   0x8007
+#define MUS_MARK                      0x8008
+#define SET_PALETTE                   0x8009
+#define PARAM1                        0x800A
+#define PARAM2                        0x800B
+#define PARAM3                        0x800C
+#define PARAM4                        0x800D
+#define PARAM5                        0x800E
+#define VIDEOCPU_STATUS               0x800F
+#define SOUNDCPU_STATUS               0x8010
+#define VM_VARS                       0x9000
 
 /*****************
  * Thread struct *
@@ -64,13 +73,15 @@ bool useVideo2; //TODO: review this! Should be set on vm_init() ?
  * Miscelaneous Definitions *
  ****************************/
 #define BIT(v, b) (v & (1 << b))
-#define GAME_PART(n) (0x3E80 + n)
+//TODO: review this: #define GAME_PART(n) (0x3E80 + n)
+#define GAME_PART(n) (n & 0x0F)
 #define COLOR_BLACK   0xFF
 #define DEFAULT_ZOOM  0x40
 #define CINEMATIC     0
 #define VIDEO_2       1
 #define NUM_THREADS   64
 #define UNUSED_PARAM  0
+#define NO_BANK_SWITCH_REQUEST 0
 
 /* Video operation IDs: */
 #define VIDEO_NOP              0
@@ -81,30 +92,43 @@ bool useVideo2; //TODO: review this! Should be set on vm_init() ?
 #define COPY_VIDEO_PAGE        5
 #define DRAW_STRING            6
 #define LOAD_SCREEN            7
+#define SET_DATA_BUFFER        8
 
 /* Sound operation IDs: */
 #define SOUND_NOP              0
 #define PLAY_SAMPLE            1
-#define PLAYER_STOP            2
-#define MUTE_CHANNELS          3
-#define LOAD_SFX_MODULE        4
-#define PLAYER_START           5
-#define SET_EVENTS_DELAY       6
+#define PLAYER_START           2
+#define PLAYER_STOP            3
+#define STOP_AND_MUTE_CHANNELS 4
+#define SET_EVENTS_DELAY       5
 
 /********************************
  * MainCPU memory-map functions *
  ********************************/
+#define MESSAGE_OK_TO_RECEIVE 0x12
+#define MESSAGE_RUNNING_COMMAND 0x34
+
 void video_call(uint8_t video_operation_id,
                 uint8_t param1,
                 uint8_t param2,
                 uint8_t param3,
-                uint8_t param4){
-    video_operation_id;
-    param1;
-    param2;
-    param3;
-    param4;
-    //TODO: Implement-me!
+                uint8_t param4,
+                uint8_t param5){
+    while ( *((uint8_t *) VIDEOCPU_STATUS) != MESSAGE_OK_TO_RECEIVE){
+      // keep waiting
+    }
+
+    *((uint8_t *) PARAM1) = param1;
+    *((uint8_t *) PARAM2) = param2;
+    *((uint8_t *) PARAM3) = param3;
+    *((uint8_t *) PARAM4) = param4;
+    *((uint8_t *) PARAM5) = param5;
+    *((uint8_t *) VIDEO_LATCH) = video_operation_id;
+
+    while ( *((uint8_t *) VIDEOCPU_STATUS) != MESSAGE_RUNNING_COMMAND){
+      // keep waiting
+    }
+    *((uint8_t *) VIDEO_LATCH) = VIDEO_NOP;
 }
 
 void sound_call(uint8_t sound_operation_id,
@@ -112,12 +136,22 @@ void sound_call(uint8_t sound_operation_id,
                 uint8_t param2,
                 uint8_t param3,
                 uint8_t param4){
-    sound_operation_id;
-    param1;
-    param2;
-    param3;
-    param4;
-    //TODO: Implement-me!
+    return; //TODO: re-enable sound calls.
+
+    while ( *((uint8_t *) SOUNDCPU_STATUS) != MESSAGE_OK_TO_RECEIVE){
+      // keep waiting
+    }
+
+    *((uint8_t *) PARAM1) = param1;
+    *((uint8_t *) PARAM2) = param2;
+    *((uint8_t *) PARAM3) = param3;
+    *((uint8_t *) PARAM4) = param4;
+    *((uint8_t *) SOUND_LATCH) = sound_operation_id;
+
+    while ( *((uint8_t *) SOUNDCPU_STATUS) != MESSAGE_RUNNING_COMMAND){
+      // keep waiting
+    }
+    *((uint8_t *) SOUND_LATCH) = SOUND_NOP;
 }
 
 uint8_t fetch_byte(){
@@ -135,7 +169,8 @@ uint16_t fetch_word(){
 
 void set_instruction_pointer(uint16_t offset){
     PC = offset;
-    *((uint8_t*) SET_INSTRUCTION_POINTER) = offset;
+    *((uint8_t*) SET_INSTRUCTION_POINTER_LOW) = (offset & 0xFF);
+    *((uint8_t*) SET_INSTRUCTION_POINTER_HIGH) = (offset >> 8);
 }
 
 void set_palette(uint8_t id){
@@ -155,16 +190,18 @@ void write_vm_variable(uint8_t i, uint16_t value){
 }
 
 void switch_level_bank(uint8_t id){
-    current_level_bank = id;
-    *((uint8_t*) SWITCH_LEVEL_BANK) = id;
+    current_level_bank = id & 0x0F;
+    *((uint8_t*) SWITCH_LEVEL_BANK) = id & 0x0F;
 
-    sound_call(PLAYER_STOP, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
-    sound_call(MUTE_CHANNELS, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
+    //TODO: reenable this call:
+    // sound_call(STOP_AND_MUTE_CHANNELS, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
 
     write_vm_variable(0xE4, 0x14); //why?
 
-//    ((another_world_vm_state*) owner())->setupPart(partId);
-    vm_init();
+    set_instruction_pointer(0x0000);
+    init_threads();
+
+    requestedNextBank = NO_BANK_SWITCH_REQUEST;
 }
 
 uint8_t read_input(){
@@ -177,12 +214,6 @@ uint16_t read_keyboard(){
     return 0x00;
 }
 
-void setDataBuffer(uint8_t buffer_id, uint16_t offset){
-    buffer_id;
-    offset;
-    //TODO: Implement-me!
-}
-
 void log_error(char const *msg){
     msg;
     //TODO: Implement-me!
@@ -190,9 +221,16 @@ void log_error(char const *msg){
 }
 
 void sleep(uint8_t time_slices){
-    time_slices;
-    //TODO: Implement-me!
+    //uint16_t i;
+    uint8_t j;
+    //TODO: Fix the time constant based on the 16MHz XTAL oscilator.
     //We're expected to sleep 50msecs per time_slice
+    for (j=0; j<time_slices; j++) {
+        // how long does the following loop take?
+        //for (i=0; i<0xFFFE; i++) {
+            /* do nothing */
+        //}
+    }
 }
 
 /***************************
@@ -253,9 +291,8 @@ void checkThreadRequests(){
     uint8_t i;
 
     //Check if a part switch has been requested.
-    if (requestedNextBank != 0) {
+    if (requestedNextBank != NO_BANK_SWITCH_REQUEST) {
         switch_level_bank(requestedNextBank);
-        requestedNextBank = 0;
     }
 
     for (i=0; i<NUM_THREADS; i++){
@@ -281,7 +318,11 @@ void nextThread(){
             /* End of Frame */
             current_thread = 0;
             checkThreadRequests();
-            video_call(UPDATE_DISPLAY, 0xFE, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
+            video_call(UPDATE_DISPLAY, 0xFE,
+                                       UNUSED_PARAM,
+                                       UNUSED_PARAM,
+                                       UNUSED_PARAM,
+                                       UNUSED_PARAM);
         }
         current = &threads[current_thread];
     } while (current->state == FROZEN
@@ -364,11 +405,7 @@ void input_updatePlayer() {
  *************/
 void vm_init(){
     stack_init();
-    set_instruction_pointer(0x0000);
     switch_level_bank(0);
-    init_threads();
-
-    requestedNextBank = 0;
 }
 
 void execute_instruction(){
@@ -390,9 +427,18 @@ void execute_instruction(){
 
         // This switch the polygon database to "cinematic" and
         // probably draws a black polygon over all the screen.
-        setDataBuffer(CINEMATIC, offset);
-        video_call(READ_AND_DRAW_POLYGON, COLOR_BLACK, DEFAULT_ZOOM, x, y);
+        video_call(SET_DATA_BUFFER,
+                   CINEMATIC,
+                   offset >> 8,
+                   offset & 0xFF,
+                   UNUSED_PARAM,
+                   UNUSED_PARAM);
 
+        video_call(READ_AND_DRAW_POLYGON,
+                   COLOR_BLACK,
+                   DEFAULT_ZOOM & 0xFF,
+                   DEFAULT_ZOOM >> 8,
+                   x, y);
         return;
     }
 
@@ -448,8 +494,18 @@ void execute_instruction(){
         break;
         }
 
-        setDataBuffer(useVideo2 ? VIDEO_2 : CINEMATIC, offset);
-        video_call(READ_AND_DRAW_POLYGON, 0xFF, zoom, x, y);
+        video_call(SET_DATA_BUFFER,
+                   useVideo2 ? VIDEO_2 : CINEMATIC,
+                   offset >> 8,
+                   offset & 0xFF,
+                   UNUSED_PARAM,
+                   UNUSED_PARAM);
+
+        video_call(READ_AND_DRAW_POLYGON,
+                   COLOR_BLACK,
+                   zoom,
+                   x, y,
+                   UNUSED_PARAM);
         return;
     }
 
@@ -641,21 +697,37 @@ void execute_instruction(){
         case 0x0D: /* selectVideoPage */
         {
             uint8_t frameBufferId = fetch_byte();
-            video_call(SELECT_VIDEO_PAGE, frameBufferId, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
+            video_call(SELECT_VIDEO_PAGE,
+                       frameBufferId,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM);
             return;
         }
         case 0x0E: /* fillVideoPage */
         {
             uint8_t pageId = fetch_byte();
             uint8_t color = fetch_byte();
-            video_call(FILL_PAGE, pageId, color, UNUSED_PARAM, UNUSED_PARAM);
+            video_call(FILL_PAGE,
+                       pageId,
+                       color,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM);
             return;
         }
         case 0x0F: /* copyVideoPage */
         {
             uint8_t srcPageId = fetch_byte();
             uint8_t dstPageId = fetch_byte();
-            video_call(COPY_VIDEO_PAGE, srcPageId, dstPageId, read_vm_variable(VM_VARIABLE_SCROLL_Y), UNUSED_PARAM);
+            uint16_t vscroll = read_vm_variable(VM_VARIABLE_SCROLL_Y);
+            video_call(COPY_VIDEO_PAGE,
+                       srcPageId,
+                       dstPageId,
+                       vscroll & 0xFF,
+                       vscroll >> 8,
+                       UNUSED_PARAM);
             return;
         }
         case 0x10: /* blitFramebuffer */
@@ -678,7 +750,12 @@ void execute_instruction(){
             //Why ?
             write_vm_variable(0xF7, 0x0000);
 #endif
-            video_call(UPDATE_DISPLAY, pageId, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
+            video_call(UPDATE_DISPLAY,
+                       pageId,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM,
+                       UNUSED_PARAM);
             return;
         }
         case 0x11: /* killThread */
@@ -690,11 +767,15 @@ void execute_instruction(){
         case 0x12: /* drawString */
         {
             uint16_t stringId = fetch_word();
-            uint16_t x = fetch_byte();
-            uint16_t y = fetch_byte();
-            uint16_t color = fetch_byte();
+            uint8_t x = fetch_byte();
+            uint8_t y = fetch_byte();
+            uint8_t color = fetch_byte();
 
-            video_call(DRAW_STRING, stringId, x, y, color);
+            video_call(DRAW_STRING,
+                       stringId & 0xFF,
+                       stringId >> 8,
+                       x, y,
+                       color);
             return;
         }
         case 0x13: /* sub */
@@ -752,8 +833,7 @@ void execute_instruction(){
             uint16_t resourceId = fetch_word();
 
             if (resourceId == 0) {
-                sound_call(PLAYER_STOP, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
-                sound_call(MUTE_CHANNELS, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM); //TODO: review this.
+                sound_call(STOP_AND_MUTE_CHANNELS, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
                 return;
             }
 
@@ -767,7 +847,11 @@ void execute_instruction(){
                                                      0x49, 0x53, 0x90, 0x91}; //TODO: extract this into external ROM data.
                 for (i = 0; i < sizeof(screen_resource_indexes); i++) {
                     if (screen_resource_indexes[i]==resourceId) {
-                        video_call(LOAD_SCREEN, i, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
+                        video_call(LOAD_SCREEN, i,
+                                   UNUSED_PARAM,
+                                   UNUSED_PARAM,
+                                   UNUSED_PARAM,
+                                   UNUSED_PARAM);
                     }
                 }
             }
@@ -780,9 +864,9 @@ void execute_instruction(){
             uint8_t pos = fetch_byte();
 
             if (resNum != 0) {
-                sound_call(LOAD_SFX_MODULE, resNum, delay, pos, UNUSED_PARAM);
-                sound_call(PLAYER_START, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
-                //TODO: can't PLAYER_START be inplicitely run after LOAD_SFX_MODULE ?!
+                //LOAD_SFX_MODULE is implicitely run right before PLAYER_START
+                sound_call(PLAYER_START, resNum, delay, pos, UNUSED_PARAM);
+
             } else if (delay != 0) {
                 sound_call(SET_EVENTS_DELAY, delay, UNUSED_PARAM, UNUSED_PARAM, UNUSED_PARAM);
             } else {
@@ -795,6 +879,8 @@ void execute_instruction(){
 }
 
 void init_system(){
+    *((uint8_t *) VIDEO_LATCH) = VIDEO_NOP;
+    *((uint8_t *) SOUND_LATCH) = SOUND_NOP;
     vm_init();
 }
 

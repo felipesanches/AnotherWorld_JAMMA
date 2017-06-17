@@ -1,10 +1,10 @@
 CC      = sdcc
 CFLAGS  = -mz80 --code-loc 0x0080 --data-loc 0xc000 --no-std-crt0
 
-rom     = anotherworld_maincpu.rom
+rom     = anotherworld_videocpu.rom
 romsize = 32768
 
-objs    = anotherworld_maincpu.rel boot.rel
+objs    = anotherworld_videocpu.rel boot.rel
 
 
 .PHONY: all
@@ -32,13 +32,13 @@ clean:
 		$(objs:.rel=.sym) *.d *.noi
 
 .PHONY: run
-run: anotherw/anotherworld_maincpu.rom
+run: anotherw/anotherworld_videocpu.rom
 	~/mame/another64 -rp . anotherw
 
-debug: anotherw/anotherworld_maincpu.rom
+debug: anotherw/anotherworld_videocpu.rom
 	~/mame/another64 -rp . anotherw -debug -window
 
-anotherw/anotherworld_maincpu.rom: $(rom)
+anotherw/anotherworld_videocpu.rom: $(rom)
 	install -D -m644 $(rom) $@
 
 
