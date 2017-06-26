@@ -19,19 +19,20 @@ void init_threads();
 #define SET_INSTRUCTION_POINTER_HIGH  0x8001
 #define FETCH_BYTE                    0x8002
 #define BUTTONS                       0x8003
-#define KEYBOARD                      0x8004
-#define SWITCH_LEVEL_BANK             0x8005
-#define SOUND_LATCH                   0x8006
-#define VIDEO_LATCH                   0x8007
-#define MUS_MARK                      0x8008
-#define SET_PALETTE                   0x8009
-#define PARAM1                        0x800A
-#define PARAM2                        0x800B
-#define PARAM3                        0x800C
-#define PARAM4                        0x800D
-#define PARAM5                        0x800E
-#define VIDEOCPU_STATUS               0x800F
-#define SOUNDCPU_STATUS               0x8010
+#define KEYBOARD_LOW                  0x8004
+#define KEYBOARD_HIGH                 0x8005
+#define SWITCH_LEVEL_BANK             0x8006
+#define SOUND_LATCH                   0x8007
+#define VIDEO_LATCH                   0x8008
+#define MUS_MARK                      0x8009
+#define SET_PALETTE                   0x800A
+#define PARAM1                        0x800B
+#define PARAM2                        0x800C
+#define PARAM3                        0x800D
+#define PARAM4                        0x800E
+#define PARAM5                        0x800F
+#define VIDEOCPU_STATUS               0x8010
+#define SOUNDCPU_STATUS               0x8011
 #define VM_VARS                       0x9000
 
 /*****************
@@ -53,7 +54,7 @@ typedef struct Thread_struct
  ********************/
 
 /* vm-kernel globals: */
-uint16_t PC; // Program Counter register (a.k.a. Instruction Pointer)
+uint16_t PC;
 uint16_t requestedNextBank;
 
 /* vm-stack globals: */
@@ -67,7 +68,7 @@ uint8_t current_thread;
 uint16_t current_level_bank; //TODO: review this. It should be uint8_t (from 0 to 9)
 
 /* video-related globals: */
-bool useVideo2; //TODO: review this! Should be set on vm_init() ?
+bool useVideo2;
 
 /****************************
  * Miscelaneous Definitions *
@@ -77,8 +78,8 @@ bool useVideo2; //TODO: review this! Should be set on vm_init() ?
 #define GAME_PART(n) (n & 0x0F)
 #define COLOR_BLACK   0xFF
 #define DEFAULT_ZOOM  0x40
-#define CINEMATIC     0
-#define VIDEO_2       1
+#define CINEMATIC     0x00
+#define VIDEO_2       0x01
 #define NUM_THREADS   64
 #define UNUSED_PARAM  0
 #define NO_BANK_SWITCH_REQUEST 0
@@ -155,8 +156,9 @@ void sound_call(uint8_t sound_operation_id,
 }
 
 uint8_t fetch_byte(){
-    PC++; // we keep track of PC increments to avoid having to
-          // read it from the external counter chip
+    PC++;
+    threads[current_thread].PC++; // we keep track of PC increments to avoid having to
+                   // read it from the external counter chip
     return *((uint8_t*) FETCH_BYTE);
 }
 
@@ -169,6 +171,7 @@ uint16_t fetch_word(){
 
 void set_instruction_pointer(uint16_t offset){
     PC = offset;
+    threads[current_thread].PC = offset;
     *((uint8_t*) SET_INSTRUCTION_POINTER_LOW) = (offset & 0xFF);
     *((uint8_t*) SET_INSTRUCTION_POINTER_HIGH) = (offset >> 8);
 }
@@ -205,13 +208,28 @@ void switch_level_bank(uint8_t id){
 }
 
 uint8_t read_input(){
-    //TODO: Implement-me!
-    return 0x00;
+    return *((uint8_t *) BUTTONS);
 }
 
 uint16_t read_keyboard(){
-    // TODO: Implement-me!
-    return 0x00;
+    uint16_t value = *((uint8_t *) KEYBOARD_LOW);
+    uint8_t retval = 0;
+    const uint8_t* retcode = "BCDFGHJKLRTX";
+    uint16_t i = 1;
+
+    value = *((uint8_t *) KEYBOARD_LOW);
+    value |= (*((uint8_t *) KEYBOARD_HIGH) << 8);
+
+    if (value & 0x1000)
+        return 8;
+
+    while ((retval < 12)){
+        if ((value & i) != 0)
+            return retcode[retval];
+        retval++;
+        i = i << 1;
+    }
+    return 0;
 }
 
 void log_error(char const *msg){
@@ -400,12 +418,34 @@ void input_updatePlayer() {
         write_vm_variable(VM_VARIABLE_HERO_ACTION_POS_MASK, m);
 }
 
+uint16_t time(uint16_t seed){
+    seed;
+    //TODO: implement-me!
+    return 0x0003;
+}
+
 /*************
  * VM kernel *
  *************/
+//#define BYPASS_PROTECTION
 void vm_init(){
     stack_init();
+
+#ifdef VM_HACK_INIT_VAR_54_WITH_81
+    // Without this, the Interplay logo does not show up
+    // while running the MSDOS bytecode:
+    write_vm_variable(0x54, 0x0081);
+#endif
+
+#ifdef BYPASS_PROTECTION 
+    //This is a hack to skip the code wheel
+    write_vm_variable(VM_VARIABLE_HERO_ACTION, 0xFFFF);
+    switch_level_bank(1);
+#else
     switch_level_bank(0);
+#endif
+
+    write_vm_variable(VM_VARIABLE_RANDOM_SEED, time(0));
 }
 
 void execute_instruction(){
@@ -429,8 +469,8 @@ void execute_instruction(){
         // probably draws a black polygon over all the screen.
         video_call(SET_DATA_BUFFER,
                    CINEMATIC,
-                   offset >> 8,
                    offset & 0xFF,
+                   offset >> 8,
                    UNUSED_PARAM,
                    UNUSED_PARAM);
 
@@ -495,17 +535,17 @@ void execute_instruction(){
         }
 
         video_call(SET_DATA_BUFFER,
-                   useVideo2 ? VIDEO_2 : CINEMATIC,
-                   offset >> 8,
+                   (useVideo2 == TRUE) ? VIDEO_2 : CINEMATIC,
                    offset & 0xFF,
+                   offset >> 8,
                    UNUSED_PARAM,
                    UNUSED_PARAM);
 
         video_call(READ_AND_DRAW_POLYGON,
                    COLOR_BLACK,
-                   zoom,
-                   x, y,
-                   UNUSED_PARAM);
+                   zoom & 0xFF,
+                   zoom >> 8,
+                   x, y);
         return;
     }
 
@@ -556,7 +596,7 @@ void execute_instruction(){
         case 0x04: /* CALL subroutine instruction */
         {
             uint16_t addr = fetch_word();
-            stack_push(PC);
+            stack_push(current->PC);
             set_instruction_pointer(addr);
             return;
         }
@@ -568,7 +608,7 @@ void execute_instruction(){
         case 0x06: /* pauseThread instruction (a.k.a. "break") */
         {
             if (current->requested_PC == NO_REQUEST)
-                current->requested_PC = PC;
+                current->requested_PC = current->PC;
 
             nextThread();
             return;

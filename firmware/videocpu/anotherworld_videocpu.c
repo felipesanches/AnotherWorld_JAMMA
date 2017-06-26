@@ -113,8 +113,8 @@ void set_polygon_data_offset(uint16_t offset){
 
 void set_data_buffer(){
     uint8_t buffer_id = params[0];
-    uint16_t offset = params[1] << 8;
-    offset |= params[2];
+    uint16_t offset = params[1];
+    offset |= params[2] << 8;
 
     *((uint8_t *) SELECT_POLYGON_DATA_SOURCE) = buffer_id;
     set_polygon_data_offset(offset);
@@ -181,17 +181,17 @@ void drawLineP(int16_t x1, int16_t x2, uint8_t color) {
 
 int32_t calcStep(uint8_t a, uint8_t b, uint16_t *dy) {
     uint16_t v = 0x4000;
-    int dx = points_x[b] - points_x[a];
+    int16_t dx = points_x[b] - points_x[a];
     *dy = points_y[b] - points_y[a];
     if (*dy > 0)
         v = 0x4000 / *dy;
     return dx * v * 4;
 }
 
-void fill_polygon(uint8_t color, uint16_t zoom, int16_t pt_x, int16_t pt_y){
+void fill_polygon(uint8_t color, int16_t pt_x, int16_t pt_y){
     int16_t xmin, xmax, ymin, ymax;
     uint16_t i, j;
-    int16_t x1, x2;
+    uint16_t x1, x2;
     uint32_t cpt1, cpt2;
     uint16_t h;
     int32_t step1, step2;
@@ -218,10 +218,10 @@ void fill_polygon(uint8_t color, uint16_t zoom, int16_t pt_x, int16_t pt_y){
     i++;
     j--;
 
-    cpt1 = x1 << 16;
-    cpt2 = x2 << 16;
+    cpt1 = ((uint32_t) x1) << 16;
+    cpt2 = ((uint32_t) x2) << 16;
 
-    while (TRUE) {
+    while (1) {
         num_points -= 2;
         if (num_points == 0) break;
         step1 = calcStep(j + 1, j, &h);
@@ -241,8 +241,8 @@ void fill_polygon(uint8_t color, uint16_t zoom, int16_t pt_x, int16_t pt_y){
                 if (hliney >= 0) {
                     x1 = cpt1 >> 16;
                     x2 = cpt2 >> 16;
-                    if (x1 < 320 && x2 >= 0) {
-                        if (x1 < 0) x1 = 0;
+                    if (x1 <= 319/* && x2 >= 0*/) {
+                        //if (x1 < 0) x1 = 0;
                         if (x2 > 319) x2 = 319;
                         if (color < 0x10) {
                            drawLineN(x1, x2, color);
@@ -277,15 +277,22 @@ void read_polygon_vertices(uint16_t zoom) {
 }
 
 void _read_and_draw_polygon(uint8_t color, uint16_t zoom, int16_t pt_x, int16_t pt_y) {
-    uint8_t value = fetch_polygon_data();
+    uint8_t value;
+    uint16_t backup;
+
+    value = fetch_polygon_data();
 
     if (value >= 0xC0) {
         if (color & 0x80) {
             color = value & 0x3F;
         }
 
+        backup = polygon_data_offset; //NO NEED ?
+
         read_polygon_vertices(zoom);
-        fill_polygon(color, zoom, pt_x, pt_y);
+        fill_polygon(color, pt_x, pt_y);
+
+        set_polygon_data_offset(backup); //NO NEED ?
     } else {
         value &= 0x3F;
         switch (value){
@@ -310,8 +317,8 @@ void read_and_draw_polygon_hierarchy(uint16_t zoom, int16_t pgc_x, int16_t pgc_y
 
     children = fetch_polygon_data();
     for ( ; children >= 0; --children) {
-        offset = fetch_polygon_data();
-        offset = offset << 8 | fetch_polygon_data();
+        offset = fetch_polygon_data() << 8;
+        offset |= fetch_polygon_data();
 
         po_x = pt_x + fetch_polygon_data() * zoom / DEFAULT_ZOOM;
         po_y = pt_y + fetch_polygon_data() * zoom / DEFAULT_ZOOM;
@@ -336,11 +343,11 @@ void read_and_draw_polygon(){
     int16_t pgc_x, pgc_y;
     uint8_t color;
 
-    color = 0xff; //BLACK_COLOR
+    color = params[0];
     zoom = params[1];
-    zoom |= (params[0] << 8);
-    pgc_x = params[2];
-    pgc_y = params[3];
+    zoom |= (params[2] << 8);
+    pgc_x = params[3];
+    pgc_y = params[4];
 
     _read_and_draw_polygon(color, zoom, pgc_x, pgc_y);
 }
@@ -469,8 +476,8 @@ void draw_string(){
     uint8_t* c;
     uint16_t str_index;
 
-    stringId = params[1];
-    stringId |= (params[0] << 8);
+    stringId = params[0];
+    stringId |= (params[1] << 8);
     x = params[2];
     y = params[3];
     color = params[4];
@@ -478,9 +485,9 @@ void draw_string(){
     x = 8 * (x-1);
     x0 = x;
 
-    index_ptr = *((uint8_t **) (STRINGS + 0x1000 + 2*stringId));
+    index_ptr = (uint8_t *) (STRINGS + 0x1000 + 2*stringId);
     str_index = index_ptr[1] << 8 | index_ptr[0];
-    c = *((uint8_t **) (STRINGS + str_index));
+    c = (uint8_t *) (STRINGS + str_index);
 
     for (; *c != '\0'; c++){
         if (*c == '\n'){
@@ -556,4 +563,9 @@ void main_loop(){
         case LOAD_SCREEN: load_screen(); break;
         case SET_DATA_BUFFER: set_data_buffer(); break;
     }
+
+    do {
+        // Waiting for maincpu to restor VIDEO_NOP...
+        request = *((uint8_t *) VIDEO_REQUEST);
+    } while ( request != VIDEO_NOP );
 }
