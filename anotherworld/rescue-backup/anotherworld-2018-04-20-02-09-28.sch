@@ -1,4 +1,8 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:anotherworld-rescue
+LIBS:27c801
+LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 26 0
 EELAYER END

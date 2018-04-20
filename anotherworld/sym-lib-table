@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name anotherworld-rescue)(type Legacy)(uri ${KIPRJMOD}/anotherworld-rescue.lib)(options "")(descr ""))
+  (lib (name 27c801)(type Legacy)(uri ${KIPRJMOD}/27c801.lib)(options "")(descr ""))
+  (lib (name o_ttl)(type Legacy)(uri ${KIPRJMOD}/o_ttl.lib)(options "")(descr ""))
+  (lib (name jamma_connector)(type Legacy)(uri ${KIPRJMOD}/jamma_connector.lib)(options "")(descr ""))
+)

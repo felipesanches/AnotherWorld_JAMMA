@@ -1,4 +1,8 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:anotherworld-rescue
+LIBS:27c801
+LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 26 0
 EELAYER END
@@ -23,7 +27,7 @@ BLUE
 Text GLabel 9700 7600 0    60   Input ~ 0
 SYNC
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57B2DE52
 P 9800 6450
 F 0 "#PWR?" H 9800 6540 20  0001 C CNN
@@ -34,7 +38,7 @@ F 3 "" H 9800 6450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L jamma_connector:JAMMA_CONNECTOR JAMMA1
+L JAMMA_CONNECTOR JAMMA1
 U 1 1 57B302FA
 P 11500 7750
 F 0 "JAMMA1" H 10700 9350 60  0000 C CNN
@@ -52,7 +56,7 @@ Wire Wire Line
 	9800 6700 10250 6700
 Connection ~ 9800 6600
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57B3031F
 P 13200 6450
 F 0 "#PWR?" H 13200 6540 20  0001 C CNN
@@ -78,7 +82,7 @@ Wire Wire Line
 Wire Wire Line
 	10250 7500 10100 7500
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57B3035A
 P 9950 6800
 F 0 "#PWR?" H 9950 6800 30  0001 C CNN
@@ -96,7 +100,7 @@ Wire Wire Line
 	10250 6500 9950 6500
 Connection ~ 9950 6500
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57B3039A
 P 13050 6800
 F 0 "#PWR?" H 13050 6800 30  0001 C CNN
@@ -171,7 +175,7 @@ Wire Wire Line
 NoConn ~ 12750 7100
 NoConn ~ 12750 7900
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57B30AF8
 P 12850 9300
 F 0 "#PWR?" H 12850 9300 30  0001 C CNN
@@ -189,7 +193,7 @@ Wire Wire Line
 	12750 9100 12850 9100
 Connection ~ 12850 9100
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57B30B44
 P 10150 9300
 F 0 "#PWR?" H 10150 9300 30  0001 C CNN

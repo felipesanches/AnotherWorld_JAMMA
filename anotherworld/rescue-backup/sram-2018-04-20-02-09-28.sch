@@ -1,4 +1,8 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:anotherworld-rescue
+LIBS:27c801
+LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +19,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L anotherworld-rescue:6116 IC?
+L 6116 IC?
 U 1 1 57A2BAA0
 P 9150 10050
 F 0 "IC?" H 8750 10850 40  0000 C CNN
@@ -48,7 +52,7 @@ DATA_6
 Text GLabel 8200 10850 0    60   3State ~ 0
 DATA_7
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A95CE7
 P 8300 9400
 F 0 "#PWR?" H 8300 9400 30  0001 C CNN
@@ -59,7 +63,7 @@ F 3 "" H 8300 9400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:74LS374-RESCUE-anotherworld U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A95F2B
 P 9250 6850
 F 0 "U?" H 9350 6550 60  0000 C CNN
@@ -98,7 +102,7 @@ Memory Ranges:\n\n0 - Channel Pointers\n     64 x 16-bit instruction pointer val
 Text GLabel 8100 5850 0    60   Input ~ 0
 SRAM_ADDR_CLK
 $Comp
-L anotherworld-rescue:74469 U?
+L 74469 U?
 U 1 1 57A96493
 P 12250 6800
 F 0 "U?" H 12250 6400 70  0000 C CNN
@@ -122,7 +126,7 @@ STACK_COUNTER_FUNCTION_0
 Text GLabel 11400 6050 0    60   Input ~ 0
 STACK_COUNTER_FUNCTION_1
 $Comp
-L anotherworld-rescue:74469 U?
+L 74469 U?
 U 1 1 57A9717D
 P 15550 6800
 F 0 "U?" H 15550 6400 70  0000 C CNN
@@ -146,7 +150,7 @@ CHANNEL_COUNTER_FUNCTION_0
 Text GLabel 14700 6050 0    60   Input ~ 0
 CHANNEL_COUNTER_FUNCTION_1
 $Comp
-L anotherworld-rescue:74LS139-RESCUE-anotherworld U?
+L 74LS139-RESCUE-anotherworld U?
 U 1 1 57A97549
 P 14000 11100
 AR Path="/57A97549" Ref="U?"  Part="1" 
@@ -172,7 +176,7 @@ ADDRESS_BUS_SEL_1
 Text GLabel 12950 11000 0    60   Input ~ 0
 ADDRESS_BUS_SEL_0
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A97887
 P 13000 11450
 F 0 "#PWR?" H 13000 11450 30  0001 C CNN
@@ -183,7 +187,7 @@ F 3 "" H 13000 11450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A9F070
 P 13000 6150
 F 0 "#PWR?" H 13000 6150 30  0001 C CNN
@@ -194,7 +198,7 @@ F 3 "" H 13000 6150 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A9FBDE
 P 16300 6150
 F 0 "#PWR?" H 16300 6150 30  0001 C CNN
@@ -205,7 +209,7 @@ F 3 "" H 16300 6150 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57A9FBF7
 P 15500 8500
 F 0 "R?" V 15580 8500 40  0000 C CNN
@@ -216,7 +220,7 @@ F 3 "~" H 15500 8500 30  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57A9FC04
 P 15300 8500
 F 0 "R?" V 15380 8500 40  0000 C CNN
@@ -509,7 +513,7 @@ Wire Wire Line
 NoConn ~ 15450 7450
 NoConn ~ 15550 7450
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57A9FEEB
 P 15500 8100
 F 0 "#PWR?" H 15500 8190 20  0001 C CNN
@@ -527,7 +531,7 @@ Wire Wire Line
 	15300 8150 15300 8250
 Connection ~ 15500 8150
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57AA021B
 P 15450 6000
 F 0 "#PWR?" H 15450 6090 20  0001 C CNN

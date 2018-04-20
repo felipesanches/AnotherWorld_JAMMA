@@ -1,4 +1,8 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:anotherworld-rescue
+LIBS:27c801
+LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +19,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L anotherworld-rescue:27C512 U?
+L 27C512 U?
 U 1 1 57A7E623
 P 16300 8950
 F 0 "U?" H 16000 10000 70  0000 C CNN
@@ -26,7 +30,7 @@ F 3 "" H 16300 8950 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:27C512 U?
+L 27C512 U?
 U 1 1 57A7E630
 P 13950 8950
 F 0 "U?" H 13650 10000 70  0000 C CNN
@@ -37,7 +41,7 @@ F 3 "" H 13950 8950 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A7E78D
 P 13050 8050
 F 0 "#PWR?" H 13050 8050 30  0001 C CNN
@@ -48,7 +52,7 @@ F 3 "" H 13050 8050 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A7E7E0
 P 15400 8050
 F 0 "#PWR?" H 15400 8050 30  0001 C CNN
@@ -59,7 +63,7 @@ F 3 "" H 15400 8050 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS374-RESCUE-anotherworld U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A7EB1A
 P 6700 6450
 F 0 "U?" H 6700 6450 60  0000 C CNN
@@ -90,7 +94,7 @@ DATA_0
 Text GLabel 5750 5550 0    60   Input ~ 0
 OPCODE_CLK
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A7F0BD
 P 6000 5850
 F 0 "#PWR?" H 6000 5850 30  0001 C CNN
@@ -119,7 +123,7 @@ IPH_CLK
 Text GLabel 17300 9900 2    60   Output ~ 0
 ALU_CARRY_IN
 $Comp
-L anotherworld-rescue:27C512 U?
+L 27C512 U?
 U 1 1 57A89C68
 P 11600 8950
 F 0 "U?" H 11300 10000 70  0000 C CNN
@@ -130,7 +134,7 @@ F 3 "" H 11600 8950 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A89C6E
 P 10700 8050
 F 0 "#PWR?" H 10700 8050 30  0001 C CNN
@@ -181,7 +185,7 @@ ALU_OUT_H
 Text GLabel 9000 13700 2    60   Output ~ 0
 ALU_OUT_L
 $Comp
-L anotherworld-rescue:74HC04-RESCUE-anotherworld U?
+L 74HC04-RESCUE-anotherworld U?
 U 1 1 57A8AE99
 P 8350 13500
 F 0 "U?" H 8500 13600 40  0000 C CNN
@@ -192,7 +196,7 @@ F 3 "~" H 8350 13500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:74HC04-RESCUE-anotherworld U?
+L 74HC04-RESCUE-anotherworld U?
 U 1 1 57A8AF2C
 P 7650 13700
 F 0 "U?" H 7800 13800 40  0000 C CNN
@@ -211,7 +215,7 @@ Text GLabel 9000 13300 2    60   Output ~ 0
 NoConn ~ 6950 12700
 NoConn ~ 6850 12700
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A8BE5F
 P 6700 11500
 F 0 "#PWR?" H 6700 11500 30  0001 C CNN
@@ -222,7 +226,7 @@ F 3 "" H 6700 11500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L VCC #PWR?
 U 1 1 57A8BFC6
 P 7050 11350
 F 0 "#PWR?" H 7050 11450 30  0001 C CNN
@@ -239,7 +243,7 @@ uCode ROM #1
 Text Notes 11150 9000 0    79   ~ 16
 uCode ROM #2
 $Comp
-L anotherworld-rescue:27C512 U?
+L 27C512 U?
 U 1 1 57A8C780
 P 9250 8950
 F 0 "U?" H 8950 10000 70  0000 C CNN
@@ -250,7 +254,7 @@ F 3 "" H 9250 8950 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A8C786
 P 8350 8050
 F 0 "#PWR?" H 8350 8050 30  0001 C CNN
@@ -271,7 +275,7 @@ NoConn ~ 9850 9650
 NoConn ~ 9750 9650
 NoConn ~ 9650 9650
 $Comp
-L anotherworld-rescue:74LS138-RESCUE-anotherworld U?
+L 74LS138-RESCUE-anotherworld U?
 U 1 1 57A8CB1F
 P 7200 12100
 F 0 "U?" H 7300 12600 60  0000 C CNN
@@ -282,7 +286,7 @@ F 3 "~" H 7200 12100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS161-RESCUE-anotherworld U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57AA2BDB
 P 9450 3600
 F 0 "U?" H 9700 3300 60  0000 C CNN
@@ -293,7 +297,7 @@ F 3 "~" H 9450 3600 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS161-RESCUE-anotherworld U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57AA2C03
 P 8050 3600
 F 0 "U?" H 8300 3300 60  0000 C CNN
@@ -304,7 +308,7 @@ F 3 "~" H 8050 3600 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57AA3BF6
 P 9450 2550
 F 0 "#PWR?" H 9450 2640 20  0001 C CNN

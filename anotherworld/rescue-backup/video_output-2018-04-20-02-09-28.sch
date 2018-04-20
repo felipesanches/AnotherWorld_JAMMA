@@ -1,4 +1,8 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:anotherworld-rescue
+LIBS:27c801
+LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 26 0
 EELAYER END
@@ -21,7 +25,7 @@ GREEN
 Text GLabel 21550 13650 2    60   Output ~ 0
 BLUE
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB51E
 P 21350 8700
 F 0 "R?" V 21430 8700 40  0000 C CNN
@@ -32,7 +36,7 @@ F 3 "~" H 21350 8700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB52B
 P 20900 9100
 F 0 "R?" V 20980 9100 40  0000 C CNN
@@ -43,7 +47,7 @@ F 3 "~" H 20900 9100 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB54A
 P 20500 8700
 F 0 "R?" V 20580 8700 40  0000 C CNN
@@ -54,7 +58,7 @@ F 3 "~" H 20500 8700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB550
 P 20050 9100
 F 0 "R?" V 20130 9100 40  0000 C CNN
@@ -65,7 +69,7 @@ F 3 "~" H 20050 9100 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB55A
 P 19650 8700
 F 0 "R?" V 19730 8700 40  0000 C CNN
@@ -76,7 +80,7 @@ F 3 "~" H 19650 8700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB560
 P 19200 9100
 F 0 "R?" V 19280 9100 40  0000 C CNN
@@ -87,7 +91,7 @@ F 3 "~" H 19200 9100 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB56A
 P 18800 8700
 F 0 "R?" V 18880 8700 40  0000 C CNN
@@ -98,7 +102,7 @@ F 3 "~" H 18800 8700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB570
 P 18350 9100
 F 0 "R?" V 18430 9100 40  0000 C CNN
@@ -109,7 +113,7 @@ F 3 "~" H 18350 9100 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB57B
 P 17950 8700
 F 0 "R?" V 18030 8700 40  0000 C CNN
@@ -120,7 +124,7 @@ F 3 "~" H 17950 8700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB581
 P 17500 9100
 F 0 "R?" V 17580 9100 40  0000 C CNN
@@ -131,7 +135,7 @@ F 3 "~" H 17500 9100 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB58B
 P 17100 8700
 F 0 "R?" V 17180 8700 40  0000 C CNN
@@ -142,7 +146,7 @@ F 3 "~" H 17100 8700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB5B4
 P 17100 9500
 F 0 "R?" V 17180 9500 40  0000 C CNN
@@ -153,7 +157,7 @@ F 3 "~" H 17100 9500 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57AAB5E2
 P 17100 9900
 F 0 "#PWR?" H 17100 9900 30  0001 C CNN
@@ -188,7 +192,7 @@ PAL_DATA_10
 Text GLabel 16750 7800 0    60   Input ~ 0
 PAL_DATA_11
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB972
 P 21350 11000
 F 0 "R?" V 21430 11000 40  0000 C CNN
@@ -199,7 +203,7 @@ F 3 "~" H 21350 11000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB978
 P 20900 11400
 F 0 "R?" V 20980 11400 40  0000 C CNN
@@ -210,7 +214,7 @@ F 3 "~" H 20900 11400 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB984
 P 20500 11000
 F 0 "R?" V 20580 11000 40  0000 C CNN
@@ -221,7 +225,7 @@ F 3 "~" H 20500 11000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB98A
 P 20050 11400
 F 0 "R?" V 20130 11400 40  0000 C CNN
@@ -232,7 +236,7 @@ F 3 "~" H 20050 11400 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB994
 P 19650 11000
 F 0 "R?" V 19730 11000 40  0000 C CNN
@@ -243,7 +247,7 @@ F 3 "~" H 19650 11000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB99A
 P 19200 11400
 F 0 "R?" V 19280 11400 40  0000 C CNN
@@ -254,7 +258,7 @@ F 3 "~" H 19200 11400 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9A4
 P 18800 11000
 F 0 "R?" V 18880 11000 40  0000 C CNN
@@ -265,7 +269,7 @@ F 3 "~" H 18800 11000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9AA
 P 18350 11400
 F 0 "R?" V 18430 11400 40  0000 C CNN
@@ -276,7 +280,7 @@ F 3 "~" H 18350 11400 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9B4
 P 17950 11000
 F 0 "R?" V 18030 11000 40  0000 C CNN
@@ -287,7 +291,7 @@ F 3 "~" H 17950 11000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9BA
 P 17500 11400
 F 0 "R?" V 17580 11400 40  0000 C CNN
@@ -298,7 +302,7 @@ F 3 "~" H 17500 11400 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9C2
 P 17100 11000
 F 0 "R?" V 17180 11000 40  0000 C CNN
@@ -309,7 +313,7 @@ F 3 "~" H 17100 11000 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9CB
 P 17100 11800
 F 0 "R?" V 17180 11800 40  0000 C CNN
@@ -320,7 +324,7 @@ F 3 "~" H 17100 11800 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57AAB9D2
 P 17100 12200
 F 0 "#PWR?" H 17100 12200 30  0001 C CNN
@@ -331,7 +335,7 @@ F 3 "" H 17100 12200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9F4
 P 21350 13250
 F 0 "R?" V 21430 13250 40  0000 C CNN
@@ -342,7 +346,7 @@ F 3 "~" H 21350 13250 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AAB9FA
 P 20900 13650
 F 0 "R?" V 20980 13650 40  0000 C CNN
@@ -353,7 +357,7 @@ F 3 "~" H 20900 13650 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA06
 P 20500 13250
 F 0 "R?" V 20580 13250 40  0000 C CNN
@@ -364,7 +368,7 @@ F 3 "~" H 20500 13250 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA0C
 P 20050 13650
 F 0 "R?" V 20130 13650 40  0000 C CNN
@@ -375,7 +379,7 @@ F 3 "~" H 20050 13650 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA16
 P 19650 13250
 F 0 "R?" V 19730 13250 40  0000 C CNN
@@ -386,7 +390,7 @@ F 3 "~" H 19650 13250 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA1C
 P 19200 13650
 F 0 "R?" V 19280 13650 40  0000 C CNN
@@ -397,7 +401,7 @@ F 3 "~" H 19200 13650 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA26
 P 18800 13250
 F 0 "R?" V 18880 13250 40  0000 C CNN
@@ -408,7 +412,7 @@ F 3 "~" H 18800 13250 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA2C
 P 18350 13650
 F 0 "R?" V 18430 13650 40  0000 C CNN
@@ -419,7 +423,7 @@ F 3 "~" H 18350 13650 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA36
 P 17950 13250
 F 0 "R?" V 18030 13250 40  0000 C CNN
@@ -430,7 +434,7 @@ F 3 "~" H 17950 13250 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA3C
 P 17500 13650
 F 0 "R?" V 17580 13650 40  0000 C CNN
@@ -441,7 +445,7 @@ F 3 "~" H 17500 13650 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA44
 P 17100 13250
 F 0 "R?" V 17180 13250 40  0000 C CNN
@@ -452,7 +456,7 @@ F 3 "~" H 17100 13250 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:R R?
+L R R?
 U 1 1 57AABA4D
 P 17100 14050
 F 0 "R?" V 17180 14050 40  0000 C CNN
@@ -463,7 +467,7 @@ F 3 "~" H 17100 14050 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57AABA54
 P 17100 14450
 F 0 "#PWR?" H 17100 14450 30  0001 C CNN
@@ -474,11 +478,9 @@ F 3 "" H 17100 14450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:27C128 U?
+L 27C128 U?
 U 1 1 57AABE00
 P 12850 14000
-AR Path="/57AABE00" Ref="U?"  Part="1" 
-AR Path="/57AAB07E/57AABE00" Ref="U?"  Part="1" 
 F 0 "U?" H 12600 15000 70  0000 C CNN
 F 1 "27C128" H 12850 13000 70  0000 C CNN
 F 2 "" H 12850 14000 60  0000 C CNN
@@ -487,11 +489,9 @@ F 3 "" H 12850 14000 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:27C128 U?
+L 27C128 U?
 U 1 1 57AABE1C
 P 10600 14000
-AR Path="/57AABE1C" Ref="U?"  Part="1" 
-AR Path="/57AAB07E/57AABE1C" Ref="U?"  Part="1" 
 F 0 "U?" H 10350 15000 70  0000 C CNN
 F 1 "27C128" H 10600 13000 70  0000 C CNN
 F 2 "" H 10600 14000 60  0000 C CNN
@@ -552,7 +552,7 @@ RESOURCE_BANK_1
 Text GLabel 10050 11600 0    60   Input ~ 0
 RESOURCE_BANK_0
 $Comp
-L anotherworld-rescue:74LS374-RESCUE-anotherworld U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57AAD507
 P 8200 11400
 F 0 "U?" H 8350 11100 60  0000 C CNN
@@ -571,7 +571,7 @@ NoConn ~ 8100 10700
 Text GLabel 7400 10500 0    60   Input ~ 0
 CURRENT_PALETTE_CLK
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57AAD601
 P 7500 10800
 F 0 "#PWR?" H 7500 10800 30  0001 C CNN
@@ -594,7 +594,7 @@ DATA_4
 Text GLabel 7400 9350 0    60   Input ~ 0
 DATA_5
 $Comp
-L anotherworld-rescue:74LS161-RESCUE-anotherworld U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57ACD7A3
 P 3300 3100
 F 0 "U?" H 3350 3200 60  0000 C CNN
@@ -605,7 +605,7 @@ F 3 "~" H 3300 3100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS161-RESCUE-anotherworld U?
+L 74LS161-RESCUE-anotherworld U?
 U 1 1 57ACD7B0
 P 5050 3100
 F 0 "U?" H 5100 3200 60  0000 C CNN
@@ -616,7 +616,7 @@ F 3 "~" H 5050 3100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS93-RESCUE-anotherworld U?
+L 74LS93-RESCUE-anotherworld U?
 U 1 1 57ACD7D2
 P 4000 6250
 F 0 "U?" H 4050 6100 60  0000 C CNN
@@ -627,7 +627,7 @@ F 3 "~" H 4000 6250 60  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS93-RESCUE-anotherworld U?
+L 74LS93-RESCUE-anotherworld U?
 U 1 1 57ACD7FA
 P 5200 6250
 F 0 "U?" H 5250 6100 60  0000 C CNN
@@ -638,7 +638,7 @@ F 3 "~" H 5200 6250 60  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L anotherworld-rescue:74LS93-RESCUE-anotherworld U?
+L 74LS93-RESCUE-anotherworld U?
 U 1 1 57ACD800
 P 6400 6250
 F 0 "U?" H 6450 6100 60  0000 C CNN
@@ -669,7 +669,7 @@ Text GLabel 6500 7350 2    60   Output ~ 0
 NoConn ~ 6300 7000
 NoConn ~ 6400 7000
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 4 1 57ACED17
 P 19450 1750
 AR Path="/57ACED17" Ref="U?"  Part="4" 
@@ -682,7 +682,7 @@ F 3 "~" H 19450 1750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57ACED24
 P 19450 2600
 AR Path="/57ACED24" Ref="U?"  Part="1" 
@@ -703,7 +703,7 @@ Text GLabel 16450 5150 0    60   Input ~ 0
 Text GLabel 17950 5050 0    60   Input ~ 0
 128V
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 2 1 57AD00E1
 P 18700 5150
 AR Path="/57AD00E1" Ref="U?"  Part="2" 
@@ -720,7 +720,7 @@ Text GLabel 10550 3100 0    60   Input ~ 0
 Text GLabel 10550 2900 0    60   Input ~ 0
 128H
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57AD41D2
 P 11300 3000
 AR Path="/57AD41D2" Ref="U?"  Part="1" 
@@ -751,7 +751,7 @@ Text GLabel 5700 4350 2    60   Output ~ 0
 Text GLabel 5700 4500 2    60   Output ~ 0
 16H
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57AD5942
 P 12550 1200
 AR Path="/57AD5942" Ref="U?"  Part="1" 
@@ -764,7 +764,7 @@ F 3 "~" H 12550 1200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57AD5948
 P 12550 2050
 AR Path="/57AD5948" Ref="U?"  Part="1" 
@@ -785,7 +785,7 @@ HBLANK
 Text GLabel 2250 2250 0    60   Input ~ 0
 -HRESET
 $Comp
-L anotherworld-rescue:74LS86-RESCUE-anotherworld U?
+L 74LS86-RESCUE-anotherworld U?
 U 2 1 57AD6F39
 P 11300 7950
 AR Path="/57AD6F39" Ref="U?"  Part="2" 
@@ -802,7 +802,7 @@ COMP_SYNC
 Text GLabel 13250 8250 2    60   Output ~ 0
 -COMP_SYNC
 $Comp
-L anotherworld-rescue:74HC04-RESCUE-anotherworld U?
+L 74HC04-RESCUE-anotherworld U?
 U 1 1 57AD729C
 P 12650 8250
 AR Path="/57AD729C" Ref="U?"  Part="1" 
@@ -817,7 +817,7 @@ $EndComp
 Text GLabel 10500 8050 0    60   Input ~ 0
 VSYNC
 $Comp
-L anotherworld-rescue:74LS107-RESCUE-anotherworld U?
+L 74LS107-RESCUE-anotherworld U?
 U 1 1 57AD7A10
 P 6800 3100
 AR Path="/57AD7A10" Ref="U?"  Part="1" 
@@ -856,7 +856,7 @@ NoConn ~ 5450 2400
 NoConn ~ 5550 2400
 NoConn ~ 5050 2400
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B20A82
 P 11150 2150
 AR Path="/57B20A82" Ref="U?"  Part="1" 
@@ -875,7 +875,7 @@ HRes = 320
 Text Notes 10900 3450 0    118  ~ 0
 HTotal = 416
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B20DB7
 P 12700 2900
 AR Path="/57B20DB7" Ref="U?"  Part="1" 
@@ -890,7 +890,7 @@ $EndComp
 Text GLabel 12000 2800 0    60   Input ~ 0
 256H
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B21509
 P 17200 5250
 AR Path="/57B21509" Ref="U?"  Part="1" 
@@ -905,7 +905,7 @@ $EndComp
 Text GLabel 16450 5350 0    60   Input ~ 0
 8V
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B21878
 P 17900 1650
 AR Path="/57B21878" Ref="U?"  Part="1" 
@@ -924,7 +924,7 @@ Text GLabel 17150 1550 0    60   Input ~ 0
 Text GLabel 8050 13000 0    60   Input ~ 0
 HBLANK
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57AAC673
 P 11800 13350
 F 0 "#PWR?" H 11800 13350 30  0001 C CNN
@@ -937,30 +937,30 @@ $EndComp
 Wire Wire Line
 	21350 8950 21350 9100
 Wire Wire Line
-	21150 9100 21350 9100
+	21150 9100 21550 9100
 Wire Wire Line
-	20300 9100 20500 9100
+	20300 9100 20650 9100
 Connection ~ 21350 9100
 Wire Wire Line
 	20500 9100 20500 8950
 Wire Wire Line
-	19450 9100 19650 9100
+	19450 9100 19800 9100
 Connection ~ 20500 9100
 Wire Wire Line
 	19650 9100 19650 8950
 Wire Wire Line
-	18600 9100 18800 9100
+	18600 9100 18950 9100
 Connection ~ 19650 9100
 Wire Wire Line
 	18800 9100 18800 8950
 Wire Wire Line
-	17750 9100 17950 9100
+	17750 9100 18100 9100
 Connection ~ 18800 9100
 Wire Wire Line
 	17950 9100 17950 8950
 Connection ~ 17950 9100
 Wire Wire Line
-	17100 8950 17100 9100
+	17100 8950 17100 9250
 Connection ~ 17100 9100
 Wire Wire Line
 	17100 9100 17250 9100
@@ -975,42 +975,42 @@ Wire Wire Line
 Wire Wire Line
 	19650 8100 19650 8450
 Wire Wire Line
-	16750 7950 17100 7950
+	16750 7950 20500 7950
 Wire Wire Line
 	20500 7950 20500 8450
 Wire Wire Line
 	21350 7800 21350 8450
 Wire Wire Line
-	16750 7800 17950 7800
+	16750 7800 21350 7800
 Connection ~ 17950 7800
 Connection ~ 17100 7950
 Wire Wire Line
 	21350 11250 21350 11400
 Wire Wire Line
-	21150 11400 21350 11400
+	21150 11400 21550 11400
 Wire Wire Line
-	20300 11400 20500 11400
+	20300 11400 20650 11400
 Connection ~ 21350 11400
 Wire Wire Line
 	20500 11400 20500 11250
 Wire Wire Line
-	19450 11400 19650 11400
+	19450 11400 19800 11400
 Connection ~ 20500 11400
 Wire Wire Line
 	19650 11400 19650 11250
 Wire Wire Line
-	18600 11400 18800 11400
+	18600 11400 18950 11400
 Connection ~ 19650 11400
 Wire Wire Line
 	18800 11400 18800 11250
 Wire Wire Line
-	17750 11400 17950 11400
+	17750 11400 18100 11400
 Connection ~ 18800 11400
 Wire Wire Line
 	17950 11400 17950 11250
 Connection ~ 17950 11400
 Wire Wire Line
-	17100 11250 17100 11400
+	17100 11250 17100 11550
 Connection ~ 17100 11400
 Wire Wire Line
 	17100 11400 17250 11400
@@ -1027,11 +1027,11 @@ Wire Wire Line
 Wire Wire Line
 	19650 10400 19650 10750
 Wire Wire Line
-	16750 10250 17100 10250
+	16750 10250 20500 10250
 Wire Wire Line
 	20500 10250 20500 10750
 Wire Wire Line
-	16750 10100 17950 10100
+	16750 10100 21350 10100
 Wire Wire Line
 	21350 10100 21350 10750
 Connection ~ 17950 10100
@@ -1039,30 +1039,30 @@ Connection ~ 17100 10250
 Wire Wire Line
 	21350 13500 21350 13650
 Wire Wire Line
-	21150 13650 21350 13650
+	21150 13650 21550 13650
 Wire Wire Line
-	20300 13650 20500 13650
+	20300 13650 20650 13650
 Connection ~ 21350 13650
 Wire Wire Line
 	20500 13650 20500 13500
 Wire Wire Line
-	19450 13650 19650 13650
+	19450 13650 19800 13650
 Connection ~ 20500 13650
 Wire Wire Line
 	19650 13650 19650 13500
 Wire Wire Line
-	18600 13650 18800 13650
+	18600 13650 18950 13650
 Connection ~ 19650 13650
 Wire Wire Line
 	18800 13650 18800 13500
 Wire Wire Line
-	17750 13650 17950 13650
+	17750 13650 18100 13650
 Connection ~ 18800 13650
 Wire Wire Line
 	17950 13650 17950 13500
 Connection ~ 17950 13650
 Wire Wire Line
-	17100 13500 17100 13650
+	17100 13500 17100 13800
 Connection ~ 17100 13650
 Wire Wire Line
 	17100 13650 17250 13650
@@ -1077,7 +1077,7 @@ Wire Wire Line
 Wire Wire Line
 	19650 12700 19650 13000
 Wire Wire Line
-	16750 12550 17100 12550
+	16750 12550 20500 12550
 Wire Wire Line
 	20500 12550 20500 13000
 Wire Wire Line
@@ -1143,7 +1143,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 13200 9800 13300
 Wire Wire Line
-	11500 10800 11500 12900
+	11500 10800 11500 13300
 Wire Wire Line
 	11500 12900 13750 12900
 Wire Wire Line
@@ -1153,9 +1153,9 @@ Wire Wire Line
 Wire Wire Line
 	13650 12850 11400 12850
 Wire Wire Line
-	11400 10650 11400 12850
+	11400 10650 11400 13300
 Wire Wire Line
-	11300 10500 11300 12800
+	11300 10500 11300 13300
 Wire Wire Line
 	11300 12800 13550 12800
 Wire Wire Line
@@ -1165,45 +1165,45 @@ Wire Wire Line
 Wire Wire Line
 	13450 12750 11200 12750
 Wire Wire Line
-	11200 10350 11200 12750
+	11200 10350 11200 13300
 Wire Wire Line
 	11100 13300 11100 12600
 Wire Wire Line
-	8700 12600 11100 12600
+	8700 12600 13350 12600
 Wire Wire Line
 	13350 12600 13350 13300
 Wire Wire Line
 	13250 12550 13250 13300
 Wire Wire Line
-	8600 12550 11000 12550
+	8600 12550 13250 12550
 Wire Wire Line
 	11000 12550 11000 13300
 Wire Wire Line
 	10900 13300 10900 12500
 Wire Wire Line
-	8500 12500 10900 12500
+	8500 12500 13150 12500
 Wire Wire Line
 	13150 12500 13150 13300
 Wire Wire Line
 	13050 12450 13050 13300
 Wire Wire Line
-	8400 12450 10800 12450
+	8400 12450 13050 12450
 Wire Wire Line
 	10800 12450 10800 13300
 Wire Wire Line
 	10700 13300 10700 12400
 Wire Wire Line
-	8300 12400 10700 12400
+	8300 12400 12950 12400
 Wire Wire Line
 	12950 12400 12950 13300
 Wire Wire Line
 	12850 12350 12850 13300
 Wire Wire Line
-	8200 12350 10600 12350
+	8200 12350 12850 12350
 Wire Wire Line
 	10600 12350 10600 13300
 Wire Wire Line
-	10500 11600 10500 12200
+	10500 11600 10500 13300
 Wire Wire Line
 	10500 12200 12750 12200
 Wire Wire Line
@@ -1213,9 +1213,9 @@ Wire Wire Line
 Wire Wire Line
 	12650 12150 10400 12150
 Wire Wire Line
-	10400 11450 10400 12150
+	10400 11450 10400 13300
 Wire Wire Line
-	10300 11300 10300 12100
+	10300 11300 10300 13300
 Wire Wire Line
 	10300 12100 12550 12100
 Wire Wire Line
@@ -1225,7 +1225,7 @@ Wire Wire Line
 Wire Wire Line
 	12450 12050 10200 12050
 Wire Wire Line
-	10200 11150 10200 12050
+	10200 11150 10200 13300
 Wire Wire Line
 	11500 10800 10050 10800
 Connection ~ 11500 12900
@@ -1311,7 +1311,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 7150 3700 7150
 Wire Wire Line
-	3700 7000 3700 7150
+	3700 7000 3700 7350
 Wire Wire Line
 	3700 7350 4250 7350
 Connection ~ 3700 7150
@@ -1324,13 +1324,13 @@ Wire Wire Line
 Wire Wire Line
 	3900 7650 3900 7000
 Wire Wire Line
-	4000 7000 4000 7150
+	4000 7000 4000 7800
 Wire Wire Line
 	4000 7800 4250 7800
 Wire Wire Line
 	4900 7350 5400 7350
 Wire Wire Line
-	4900 7000 4900 7150
+	4900 7000 4900 7350
 Wire Wire Line
 	5000 7000 5000 7500
 Wire Wire Line
@@ -1340,13 +1340,13 @@ Wire Wire Line
 Wire Wire Line
 	5100 7650 5100 7000
 Wire Wire Line
-	5200 7000 5200 7150
+	5200 7000 5200 7800
 Wire Wire Line
 	5200 7800 5400 7800
 Wire Wire Line
 	6100 7350 6500 7350
 Wire Wire Line
-	6100 7000 6100 7150
+	6100 7000 6100 7350
 Wire Wire Line
 	5000 5550 5000 5400
 Wire Wire Line
@@ -1384,14 +1384,14 @@ Wire Wire Line
 	6100 5350 6100 5550
 Connection ~ 5200 7150
 Wire Wire Line
-	3950 5150 3950 5400
+	3950 5150 3950 5550
 Wire Wire Line
 	3950 5400 4050 5400
 Wire Wire Line
 	4050 5400 4050 5550
 Connection ~ 3950 5400
 Wire Wire Line
-	5150 5150 5150 5400
+	5150 5150 5150 5550
 Connection ~ 3950 5150
 Wire Wire Line
 	5150 5400 5250 5400
@@ -1399,7 +1399,7 @@ Wire Wire Line
 	5250 5400 5250 5550
 Connection ~ 5150 5400
 Wire Wire Line
-	6350 5150 6350 5400
+	6350 5150 6350 5550
 Connection ~ 5150 5150
 Wire Wire Line
 	6350 5400 6450 5400
@@ -1415,7 +1415,7 @@ Wire Wire Line
 Wire Wire Line
 	20200 2050 20200 1750
 Wire Wire Line
-	20050 1750 20200 1750
+	20050 1750 20400 1750
 Wire Wire Line
 	18850 1850 18700 1850
 Wire Wire Line
@@ -1425,9 +1425,9 @@ Wire Wire Line
 Wire Wire Line
 	20200 2300 20200 2600
 Wire Wire Line
-	20050 2600 20200 2600
+	20050 2600 20400 2600
 Wire Wire Line
-	18500 1650 18650 1650
+	18500 1650 18850 1650
 Connection ~ 20200 2600
 Connection ~ 20200 1750
 Wire Wire Line
@@ -1441,7 +1441,7 @@ Wire Wire Line
 Wire Wire Line
 	12100 3000 11900 3000
 Wire Wire Line
-	2250 2050 3000 2050
+	2250 2050 4750 2050
 Wire Wire Line
 	3000 2050 3000 2400
 Wire Wire Line
@@ -1497,7 +1497,7 @@ Wire Wire Line
 Wire Wire Line
 	13300 1500 13300 1200
 Wire Wire Line
-	13150 1200 13300 1200
+	13150 1200 13500 1200
 Wire Wire Line
 	11950 1300 11800 1300
 Wire Wire Line
@@ -1507,13 +1507,13 @@ Wire Wire Line
 Wire Wire Line
 	13300 1750 13300 2050
 Wire Wire Line
-	13150 2050 13300 2050
+	13150 2050 13500 2050
 Wire Wire Line
-	11750 2150 11850 2150
+	11750 2150 11950 2150
 Connection ~ 13300 2050
 Connection ~ 13300 1200
 Wire Wire Line
-	2250 2250 2800 2250
+	2250 2250 4550 2250
 Wire Wire Line
 	4550 2250 4550 2400
 Wire Wire Line
@@ -1523,7 +1523,7 @@ Connection ~ 3000 2050
 Wire Wire Line
 	10500 7850 10700 7850
 Wire Wire Line
-	11900 7950 12050 7950
+	11900 7950 13250 7950
 Wire Wire Line
 	13100 8250 13250 8250
 Wire Wire Line
@@ -1534,7 +1534,7 @@ Connection ~ 12050 7950
 Wire Wire Line
 	10500 8050 10700 8050
 Wire Wire Line
-	6000 2550 6000 2850
+	6000 2550 6000 3350
 Wire Wire Line
 	6000 2850 6150 2850
 Wire Wire Line
@@ -1553,13 +1553,13 @@ Wire Wire Line
 Wire Wire Line
 	5900 3100 6150 3100
 Wire Wire Line
-	20850 4200 21000 4200
+	20850 4200 21200 4200
 Wire Wire Line
-	3850 5150 3950 5150
+	3850 5150 6350 5150
 Wire Wire Line
 	11750 1100 11950 1100
 Wire Wire Line
-	3100 1900 3100 2300
+	3100 1900 3100 2400
 Wire Wire Line
 	3100 2300 3200 2300
 Wire Wire Line
@@ -1584,7 +1584,7 @@ Wire Wire Line
 Wire Wire Line
 	17300 1550 17150 1550
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57AAC79A
 P 9550 13350
 F 0 "#PWR?" H 9550 13350 30  0001 C CNN
@@ -1597,14 +1597,14 @@ $EndComp
 Wire Wire Line
 	9550 13200 9550 13350
 Wire Wire Line
-	9350 13100 9700 13100
+	9350 13100 11950 13100
 Wire Wire Line
 	9700 13100 9700 13300
 Wire Wire Line
 	11950 13100 11950 13300
 Connection ~ 9700 13100
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B22C92
 P 20250 4200
 AR Path="/57B22C92" Ref="U?"  Part="1" 
@@ -1617,7 +1617,7 @@ F 3 "~" H 20250 4200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B22C98
 P 20250 5050
 AR Path="/57B22C98" Ref="U?"  Part="1" 
@@ -1630,7 +1630,7 @@ F 3 "~" H 20250 5050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	19300 5150 19450 5150
+	19300 5150 19650 5150
 Wire Wire Line
 	19650 4950 19500 4950
 Wire Wire Line
@@ -1648,7 +1648,7 @@ Wire Wire Line
 Wire Wire Line
 	21000 4750 21000 5050
 Wire Wire Line
-	20850 5050 21000 5050
+	20850 5050 21200 5050
 Connection ~ 21000 5050
 Connection ~ 21000 4200
 Wire Wire Line
@@ -1660,7 +1660,7 @@ Text GLabel 16450 4300 0    60   Input ~ 0
 Text GLabel 16450 4100 0    60   Input ~ 0
 16H
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B2320B
 P 17200 4200
 AR Path="/57B2320B" Ref="U?"  Part="1" 
@@ -1677,7 +1677,7 @@ VRESET
 Text Notes 16550 3800 0    118  ~ 0
 VTotal = 222
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B23213
 P 18700 4100
 AR Path="/57B23213" Ref="U?"  Part="1" 
@@ -1696,7 +1696,7 @@ Wire Wire Line
 Wire Wire Line
 	18100 4200 17800 4200
 Wire Wire Line
-	19300 4100 19450 4100
+	19300 4100 19650 4100
 Wire Wire Line
 	19550 3850 19450 3850
 Wire Wire Line
@@ -1711,11 +1711,11 @@ Wire Wire Line
 Wire Wire Line
 	17100 13000 17100 12550
 Wire Wire Line
-	16750 12400 17950 12400
+	16750 12400 21350 12400
 Wire Wire Line
 	17950 12400 17950 13000
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57B293E2
 P 6000 2550
 F 0 "#PWR?" H 6000 2640 20  0001 C CNN
@@ -1726,7 +1726,7 @@ F 3 "" H 6000 2550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57B29763
 P 3100 1900
 F 0 "#PWR?" H 3100 1990 20  0001 C CNN
@@ -1737,7 +1737,7 @@ F 3 "" H 3100 1900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L +5V #PWR?
 U 1 1 57B29769
 P 4850 1900
 F 0 "#PWR?" H 4850 1990 20  0001 C CNN
@@ -1761,7 +1761,7 @@ Text GLabel 7650 3350 2    60   Output ~ 0
 Wire Wire Line
 	7650 3350 7450 3350
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B29E2D
 P 12700 4450
 AR Path="/57B29E2D" Ref="U?"  Part="1" 
@@ -1774,7 +1774,7 @@ F 3 "~" H 12700 4450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:7402-RESCUE-anotherworld U?
+L 7402-RESCUE-anotherworld U?
 U 1 1 57B29E33
 P 12700 5300
 AR Path="/57B29E33" Ref="U?"  Part="1" 
@@ -1801,7 +1801,7 @@ Wire Wire Line
 Wire Wire Line
 	13450 4750 13450 4450
 Wire Wire Line
-	13300 4450 13450 4450
+	13300 4450 13650 4450
 Wire Wire Line
 	12100 4550 11950 4550
 Wire Wire Line
@@ -1811,9 +1811,9 @@ Wire Wire Line
 Wire Wire Line
 	13450 5000 13450 5300
 Wire Wire Line
-	13300 5300 13450 5300
+	13300 5300 13650 5300
 Wire Wire Line
-	11900 5400 12000 5400
+	11900 5400 12100 5400
 Connection ~ 13450 5300
 Connection ~ 13450 4450
 Wire Wire Line
@@ -1821,7 +1821,7 @@ Wire Wire Line
 Text GLabel 10500 4250 0    60   Input ~ 0
 336H
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B29E67
 P 11300 4350
 AR Path="/57B29E67" Ref="U?"  Part="1" 
@@ -1840,7 +1840,7 @@ Wire Wire Line
 Wire Wire Line
 	10500 4450 10700 4450
 $Comp
-L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
+L 74LS08-RESCUE-anotherworld U?
 U 1 1 57B2A01A
 P 11300 5400
 AR Path="/57B2A01A" Ref="U?"  Part="1" 
@@ -1958,7 +1958,7 @@ Wire Wire Line
 Wire Wire Line
 	8050 13200 8150 13200
 $Comp
-L anotherworld-rescue:74LS32-RESCUE-anotherworld U?
+L 74LS32-RESCUE-anotherworld U?
 U 1 1 57B3BEE4
 P 8750 13100
 F 0 "U?" H 8750 13150 60  0000 C CNN
@@ -1977,138 +1977,4 @@ Wire Wire Line
 Connection ~ 18650 1650
 Wire Wire Line
 	18100 4000 17800 4000
-Wire Wire Line
-	21350 9100 21550 9100
-Wire Wire Line
-	20500 9100 20650 9100
-Wire Wire Line
-	19650 9100 19800 9100
-Wire Wire Line
-	18800 9100 18950 9100
-Wire Wire Line
-	17950 9100 18100 9100
-Wire Wire Line
-	17100 9100 17100 9250
-Wire Wire Line
-	17950 7800 21350 7800
-Wire Wire Line
-	17100 7950 20500 7950
-Wire Wire Line
-	21350 11400 21550 11400
-Wire Wire Line
-	20500 11400 20650 11400
-Wire Wire Line
-	19650 11400 19800 11400
-Wire Wire Line
-	18800 11400 18950 11400
-Wire Wire Line
-	17950 11400 18100 11400
-Wire Wire Line
-	17100 11400 17100 11550
-Wire Wire Line
-	17950 10100 21350 10100
-Wire Wire Line
-	17100 10250 20500 10250
-Wire Wire Line
-	21350 13650 21550 13650
-Wire Wire Line
-	20500 13650 20650 13650
-Wire Wire Line
-	19650 13650 19800 13650
-Wire Wire Line
-	18800 13650 18950 13650
-Wire Wire Line
-	17950 13650 18100 13650
-Wire Wire Line
-	17100 13650 17100 13800
-Wire Wire Line
-	17950 12400 21350 12400
-Wire Wire Line
-	17100 12550 20500 12550
-Wire Wire Line
-	11500 12900 11500 13300
-Wire Wire Line
-	11400 12850 11400 13300
-Wire Wire Line
-	11300 12800 11300 13300
-Wire Wire Line
-	11200 12750 11200 13300
-Wire Wire Line
-	11100 12600 13350 12600
-Wire Wire Line
-	10200 12050 10200 13300
-Wire Wire Line
-	10300 12100 10300 13300
-Wire Wire Line
-	10400 12150 10400 13300
-Wire Wire Line
-	10500 12200 10500 13300
-Wire Wire Line
-	11000 12550 13250 12550
-Wire Wire Line
-	10900 12500 13150 12500
-Wire Wire Line
-	10800 12450 13050 12450
-Wire Wire Line
-	10700 12400 12950 12400
-Wire Wire Line
-	10600 12350 12850 12350
-Wire Wire Line
-	3700 7150 3700 7350
-Wire Wire Line
-	4900 7150 4900 7350
-Wire Wire Line
-	6100 7150 6100 7350
-Wire Wire Line
-	4000 7150 4000 7800
-Wire Wire Line
-	5200 7150 5200 7800
-Wire Wire Line
-	3950 5400 3950 5550
-Wire Wire Line
-	3950 5150 5150 5150
-Wire Wire Line
-	5150 5400 5150 5550
-Wire Wire Line
-	5150 5150 6350 5150
-Wire Wire Line
-	6350 5400 6350 5550
-Wire Wire Line
-	20200 2600 20400 2600
-Wire Wire Line
-	20200 1750 20400 1750
-Wire Wire Line
-	13300 2050 13500 2050
-Wire Wire Line
-	13300 1200 13500 1200
-Wire Wire Line
-	2800 2250 4550 2250
-Wire Wire Line
-	3000 2050 4750 2050
-Wire Wire Line
-	12050 7950 13250 7950
-Wire Wire Line
-	6000 2850 6000 3350
-Wire Wire Line
-	3100 2300 3100 2400
-Wire Wire Line
-	9700 13100 11950 13100
-Wire Wire Line
-	21000 5050 21200 5050
-Wire Wire Line
-	21000 4200 21200 4200
-Wire Wire Line
-	19450 4100 19650 4100
-Wire Wire Line
-	13450 5300 13650 5300
-Wire Wire Line
-	13450 4450 13650 4450
-Wire Wire Line
-	11850 2150 11950 2150
-Wire Wire Line
-	12000 5400 12100 5400
-Wire Wire Line
-	19450 5150 19650 5150
-Wire Wire Line
-	18650 1650 18850 1650
 $EndSCHEMATC

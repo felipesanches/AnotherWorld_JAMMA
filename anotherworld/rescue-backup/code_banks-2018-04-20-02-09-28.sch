@@ -1,4 +1,8 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:anotherworld-rescue
+LIBS:27c801
+LIBS:o_ttl
+LIBS:jamma_connector
 LIBS:anotherworld-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +19,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L anotherworld-rescue:74LS374-RESCUE-anotherworld U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A82FC5
 P 13200 6250
 F 0 "U?" H 13100 5900 60  0000 C CNN
@@ -136,7 +140,7 @@ Wire Wire Line
 Text GLabel 9200 7550 0    60   Input ~ 0
 IPL_CLK
 $Comp
-L anotherworld-rescue:74LS374-RESCUE-anotherworld U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A82FD7
 P 11900 6250
 F 0 "U?" H 11800 5900 60  0000 C CNN
@@ -149,7 +153,7 @@ $EndComp
 Wire Wire Line
 	12700 6950 12700 7050
 $Comp
-L anotherworld-rescue:74LS374-RESCUE-anotherworld U?
+L 74LS374-RESCUE-anotherworld U?
 U 1 1 57A84059
 P 10600 6250
 F 0 "U?" H 10500 5900 60  0000 C CNN
@@ -162,7 +166,7 @@ $EndComp
 Text Notes 11100 6200 2    60   ~ 0
 Resource\nBank Select\nRegister
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A841C1
 P 10100 7050
 F 0 "#PWR?" H 10100 7050 30  0001 C CNN
@@ -193,7 +197,7 @@ Wire Wire Line
 	10800 5550 10800 4950
 Connection ~ 10800 4950
 $Comp
-L 27c801:27C801 U?
+L 27C801 U?
 U 1 1 57A7D10C
 P 12800 10300
 F 0 "U?" H 12500 11350 70  0000 C CNN
@@ -351,7 +355,7 @@ Wire Wire Line
 Wire Wire Line
 	12800 7550 12800 6950
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A7F509
 P 11400 7050
 F 0 "#PWR?" H 11400 7050 30  0001 C CNN
@@ -362,7 +366,7 @@ F 3 "" H 11400 7050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L anotherworld-rescue:GND #PWR?
+L GND #PWR?
 U 1 1 57A7F50F
 P 12700 7050
 F 0 "#PWR?" H 12700 7050 30  0001 C CNN
