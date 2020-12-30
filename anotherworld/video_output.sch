@@ -594,81 +594,6 @@ DATA_4
 Text GLabel 7400 9350 0    60   Input ~ 0
 DATA_5
 $Comp
-L anotherworld-rescue:74LS161-RESCUE-anotherworld U?
-U 1 1 57ACD7A3
-P 3300 3100
-F 0 "U?" H 3350 3200 60  0000 C CNN
-F 1 "74LS161" H 3400 2900 60  0000 C CNN
-F 2 "~" H 3300 3100 60  0000 C CNN
-F 3 "~" H 3300 3100 60  0000 C CNN
-	1    3300 3100
-	0    1    1    0   
-$EndComp
-$Comp
-L anotherworld-rescue:74LS161-RESCUE-anotherworld U?
-U 1 1 57ACD7B0
-P 5050 3100
-F 0 "U?" H 5100 3200 60  0000 C CNN
-F 1 "74LS161" H 5150 2900 60  0000 C CNN
-F 2 "~" H 5050 3100 60  0000 C CNN
-F 3 "~" H 5050 3100 60  0000 C CNN
-	1    5050 3100
-	0    1    1    0   
-$EndComp
-$Comp
-L anotherworld-rescue:74LS93-RESCUE-anotherworld U?
-U 1 1 57ACD7D2
-P 4000 6250
-F 0 "U?" H 4050 6100 60  0000 C CNN
-F 1 "74LS93" H 4000 6000 60  0000 C CNN
-F 2 "~" H 4000 6250 60  0000 C CNN
-F 3 "~" H 4000 6250 60  0000 C CNN
-	1    4000 6250
-	0    -1   1    0   
-$EndComp
-$Comp
-L anotherworld-rescue:74LS93-RESCUE-anotherworld U?
-U 1 1 57ACD7FA
-P 5200 6250
-F 0 "U?" H 5250 6100 60  0000 C CNN
-F 1 "74LS93" H 5200 6000 60  0000 C CNN
-F 2 "~" H 5200 6250 60  0000 C CNN
-F 3 "~" H 5200 6250 60  0000 C CNN
-	1    5200 6250
-	0    -1   1    0   
-$EndComp
-$Comp
-L anotherworld-rescue:74LS93-RESCUE-anotherworld U?
-U 1 1 57ACD800
-P 6400 6250
-F 0 "U?" H 6450 6100 60  0000 C CNN
-F 1 "74LS93" H 6400 6000 60  0000 C CNN
-F 2 "~" H 6400 6250 60  0000 C CNN
-F 3 "~" H 6400 6250 60  0000 C CNN
-	1    6400 6250
-	0    -1   1    0   
-$EndComp
-Text GLabel 4250 7800 2    60   Output ~ 0
-8V
-Text GLabel 4250 7650 2    60   Output ~ 0
-4V
-Text GLabel 4250 7500 2    60   Output ~ 0
-2V
-Text GLabel 4250 7350 2    60   Output ~ 0
-1V
-Text GLabel 5400 7800 2    60   Output ~ 0
-128V
-Text GLabel 5400 7650 2    60   Output ~ 0
-64V
-Text GLabel 5400 7500 2    60   Output ~ 0
-32V
-Text GLabel 5400 7350 2    60   Output ~ 0
-16V
-Text GLabel 6500 7350 2    60   Output ~ 0
-256V
-NoConn ~ 6300 7000
-NoConn ~ 6400 7000
-$Comp
 L anotherworld-rescue:7402-RESCUE-anotherworld U?
 U 4 1 57ACED17
 P 19450 1750
@@ -715,179 +640,146 @@ F 3 "~" H 18700 5150 60  0000 C CNN
 	2    18700 5150
 	1    0    0    -1  
 $EndComp
-Text GLabel 10550 3100 0    60   Input ~ 0
+Text GLabel 10950 3100 0    60   Input ~ 0
 32H
-Text GLabel 10550 2900 0    60   Input ~ 0
+Text GLabel 10950 2900 0    60   Input ~ 0
 128H
 $Comp
 L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
 U 1 1 57AD41D2
-P 11300 3000
+P 11700 3000
 AR Path="/57AD41D2" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57AD41D2" Ref="U?"  Part="1" 
-F 0 "U?" H 11300 3050 60  0000 C CNN
-F 1 "74LS08" H 11300 2950 60  0000 C CNN
-F 2 "~" H 11300 3000 60  0000 C CNN
-F 3 "~" H 11300 3000 60  0000 C CNN
-	1    11300 3000
+F 0 "U?" H 11700 3050 60  0000 C CNN
+F 1 "74LS08" H 11700 2950 60  0000 C CNN
+F 2 "~" H 11700 3000 60  0000 C CNN
+F 3 "~" H 11700 3000 60  0000 C CNN
+	1    11700 3000
 	1    0    0    -1  
 $EndComp
-Text GLabel 2250 2050 0    60   Input ~ 0
-PIXEL_CLOCK
-Text GLabel 3950 4050 2    60   Output ~ 0
+Text GLabel 4250 3250 1    60   Output ~ 0
 8H
-Text GLabel 3950 4200 2    60   Output ~ 0
+Text GLabel 4400 3250 1    60   Output ~ 0
 4H
-Text GLabel 3950 4350 2    60   Output ~ 0
+Text GLabel 4550 3250 1    60   Output ~ 0
 2H
-Text GLabel 3950 4500 2    60   Output ~ 0
+Text GLabel 4700 3250 1    60   Output ~ 0
 1H
-Text GLabel 5700 4050 2    60   Output ~ 0
+Text GLabel 3650 3250 1    60   Output ~ 0
 128H
-Text GLabel 5700 4200 2    60   Output ~ 0
+Text GLabel 3800 3250 1    60   Output ~ 0
 64H
-Text GLabel 5700 4350 2    60   Output ~ 0
+Text GLabel 3950 3250 1    60   Output ~ 0
 32H
-Text GLabel 5700 4500 2    60   Output ~ 0
+Text GLabel 4100 3250 1    60   Output ~ 0
 16H
 $Comp
 L anotherworld-rescue:7402-RESCUE-anotherworld U?
 U 1 1 57AD5942
-P 12550 1200
+P 12950 1200
 AR Path="/57AD5942" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57AD5942" Ref="U?"  Part="1" 
-F 0 "U?" H 12550 1250 60  0000 C CNN
-F 1 "7402" H 12600 1150 60  0000 C CNN
-F 2 "~" H 12550 1200 60  0000 C CNN
-F 3 "~" H 12550 1200 60  0000 C CNN
-	1    12550 1200
+F 0 "U?" H 12950 1250 60  0000 C CNN
+F 1 "7402" H 13000 1150 60  0000 C CNN
+F 2 "~" H 12950 1200 60  0000 C CNN
+F 3 "~" H 12950 1200 60  0000 C CNN
+	1    12950 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L anotherworld-rescue:7402-RESCUE-anotherworld U?
 U 1 1 57AD5948
-P 12550 2050
+P 12950 2050
 AR Path="/57AD5948" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57AD5948" Ref="U?"  Part="1" 
-F 0 "U?" H 12550 2100 60  0000 C CNN
-F 1 "7402" H 12600 2000 60  0000 C CNN
-F 2 "~" H 12550 2050 60  0000 C CNN
-F 3 "~" H 12550 2050 60  0000 C CNN
-	1    12550 2050
+F 0 "U?" H 12950 2100 60  0000 C CNN
+F 1 "7402" H 13000 2000 60  0000 C CNN
+F 2 "~" H 12950 2050 60  0000 C CNN
+F 3 "~" H 12950 2050 60  0000 C CNN
+	1    12950 2050
 	1    0    0    -1  
 $EndComp
-Text GLabel 10350 2050 0    60   Input ~ 0
+Text GLabel 10750 2050 0    60   Input ~ 0
 256H
-Text GLabel 13500 2050 2    60   Output ~ 0
+Text GLabel 13900 2050 2    60   Output ~ 0
 -HBLANK
-Text GLabel 13500 1200 2    60   Output ~ 0
+Text GLabel 13900 1200 2    60   Output ~ 0
 HBLANK
-Text GLabel 2250 2250 0    60   Input ~ 0
--HRESET
 $Comp
 L anotherworld-rescue:74LS86-RESCUE-anotherworld U?
 U 2 1 57AD6F39
-P 11300 7950
+P 11700 7950
 AR Path="/57AD6F39" Ref="U?"  Part="2" 
 AR Path="/57AAB07E/57AD6F39" Ref="U?"  Part="2" 
-F 0 "U?" H 11350 8000 50  0000 C CNN
-F 1 "74LS86" H 11350 7900 40  0000 C CNN
-F 2 "~" H 11300 7950 60  0000 C CNN
-F 3 "~" H 11300 7950 60  0000 C CNN
-	2    11300 7950
+F 0 "U?" H 11750 8000 50  0000 C CNN
+F 1 "74LS86" H 11750 7900 40  0000 C CNN
+F 2 "~" H 11700 7950 60  0000 C CNN
+F 3 "~" H 11700 7950 60  0000 C CNN
+	2    11700 7950
 	1    0    0    -1  
 $EndComp
-Text GLabel 13250 7950 2    60   Output ~ 0
+Text GLabel 13650 7950 2    60   Output ~ 0
 COMP_SYNC
-Text GLabel 13250 8250 2    60   Output ~ 0
+Text GLabel 13650 8250 2    60   Output ~ 0
 -COMP_SYNC
 $Comp
 L anotherworld-rescue:74HC04-RESCUE-anotherworld U?
 U 1 1 57AD729C
-P 12650 8250
+P 13050 8250
 AR Path="/57AD729C" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57AD729C" Ref="U?"  Part="1" 
-F 0 "U?" H 12800 8350 40  0000 C CNN
-F 1 "74HC04" H 12850 8150 40  0000 C CNN
-F 2 "~" H 12650 8250 60  0000 C CNN
-F 3 "~" H 12650 8250 60  0000 C CNN
-	1    12650 8250
+F 0 "U?" H 13200 8350 40  0000 C CNN
+F 1 "74HC04" H 13250 8150 40  0000 C CNN
+F 2 "~" H 13050 8250 60  0000 C CNN
+F 3 "~" H 13050 8250 60  0000 C CNN
+	1    13050 8250
 	1    0    0    -1  
 $EndComp
-Text GLabel 10500 8050 0    60   Input ~ 0
+Text GLabel 10900 8050 0    60   Input ~ 0
 VSYNC
-$Comp
-L anotherworld-rescue:74LS107-RESCUE-anotherworld U?
-U 1 1 57AD7A10
-P 6800 3100
-AR Path="/57AD7A10" Ref="U?"  Part="1" 
-AR Path="/57AAB07E/57AD7A10" Ref="U?"  Part="1" 
-F 0 "U?" H 6800 3200 60  0000 C CNN
-F 1 "74LS107" H 6800 3000 60  0000 C CNN
-F 2 "~" H 6800 3100 60  0000 C CNN
-F 3 "~" H 6800 3100 60  0000 C CNN
-	1    6800 3100
-	1    0    0    -1  
-$EndComp
-Text GLabel 7650 2850 2    60   Output ~ 0
-256H
-Text GLabel 6700 3950 0    60   Input ~ 0
--HRESET
-Text GLabel 10500 7850 0    60   Input ~ 0
+Text GLabel 10900 7850 0    60   Input ~ 0
 -HSYNC
 Text GLabel 21200 4200 2    60   Output ~ 0
 VBLANK
-Text GLabel 3850 5150 0    60   Input ~ 0
-VRESET
-Text GLabel 13450 2900 2    60   Output ~ 0
+Text GLabel 13850 2900 2    60   Output ~ 0
 HRESET
-Text GLabel 11750 1100 0    60   Input ~ 0
+Text GLabel 12150 1100 0    60   Input ~ 0
 HRESET
 Text Notes 16650 5700 0    118  ~ 0
 VRes = 200
-NoConn ~ 3300 2400
-NoConn ~ 3500 2400
-NoConn ~ 3600 2400
-NoConn ~ 3700 2400
-NoConn ~ 3800 2400
-NoConn ~ 5250 2400
-NoConn ~ 5350 2400
-NoConn ~ 5450 2400
-NoConn ~ 5550 2400
-NoConn ~ 5050 2400
 $Comp
 L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
 U 1 1 57B20A82
-P 11150 2150
+P 11550 2150
 AR Path="/57B20A82" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57B20A82" Ref="U?"  Part="1" 
-F 0 "U?" H 11150 2200 60  0000 C CNN
-F 1 "74LS08" H 11150 2100 60  0000 C CNN
-F 2 "~" H 11150 2150 60  0000 C CNN
-F 3 "~" H 11150 2150 60  0000 C CNN
-	1    11150 2150
+F 0 "U?" H 11550 2200 60  0000 C CNN
+F 1 "74LS08" H 11550 2100 60  0000 C CNN
+F 2 "~" H 11550 2150 60  0000 C CNN
+F 3 "~" H 11550 2150 60  0000 C CNN
+	1    11550 2150
 	1    0    0    -1  
 $EndComp
-Text GLabel 10350 2250 0    60   Input ~ 0
+Text GLabel 10750 2250 0    60   Input ~ 0
 64H
-Text Notes 10050 1900 0    118  ~ 0
+Text Notes 10450 1900 0    118  ~ 0
 HRes = 320
-Text Notes 10900 3450 0    118  ~ 0
+Text Notes 11300 3450 0    118  ~ 0
 HTotal = 416
 $Comp
 L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
 U 1 1 57B20DB7
-P 12700 2900
+P 13100 2900
 AR Path="/57B20DB7" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57B20DB7" Ref="U?"  Part="1" 
-F 0 "U?" H 12700 2950 60  0000 C CNN
-F 1 "74LS08" H 12700 2850 60  0000 C CNN
-F 2 "~" H 12700 2900 60  0000 C CNN
-F 3 "~" H 12700 2900 60  0000 C CNN
-	1    12700 2900
+F 0 "U?" H 13100 2950 60  0000 C CNN
+F 1 "74LS08" H 13100 2850 60  0000 C CNN
+F 2 "~" H 13100 2900 60  0000 C CNN
+F 3 "~" H 13100 2900 60  0000 C CNN
+	1    13100 2900
 	1    0    0    -1  
 $EndComp
-Text GLabel 12000 2800 0    60   Input ~ 0
+Text GLabel 12400 2800 0    60   Input ~ 0
 256H
 $Comp
 L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
@@ -1303,110 +1195,6 @@ Wire Wire Line
 	8200 12100 8200 12350
 Connection ~ 10600 12350
 Wire Wire Line
-	3800 5550 3800 5400
-Wire Wire Line
-	3800 5400 3500 5400
-Wire Wire Line
-	3500 5400 3500 7150
-Wire Wire Line
-	3500 7150 3700 7150
-Wire Wire Line
-	3700 7000 3700 7150
-Wire Wire Line
-	3700 7350 4250 7350
-Connection ~ 3700 7150
-Wire Wire Line
-	3800 7000 3800 7500
-Wire Wire Line
-	3800 7500 4250 7500
-Wire Wire Line
-	4250 7650 3900 7650
-Wire Wire Line
-	3900 7650 3900 7000
-Wire Wire Line
-	4000 7000 4000 7150
-Wire Wire Line
-	4000 7800 4250 7800
-Wire Wire Line
-	4900 7350 5400 7350
-Wire Wire Line
-	4900 7000 4900 7150
-Wire Wire Line
-	5000 7000 5000 7500
-Wire Wire Line
-	5000 7500 5400 7500
-Wire Wire Line
-	5400 7650 5100 7650
-Wire Wire Line
-	5100 7650 5100 7000
-Wire Wire Line
-	5200 7000 5200 7150
-Wire Wire Line
-	5200 7800 5400 7800
-Wire Wire Line
-	6100 7350 6500 7350
-Wire Wire Line
-	6100 7000 6100 7150
-Wire Wire Line
-	5000 5550 5000 5400
-Wire Wire Line
-	5000 5400 4700 5400
-Wire Wire Line
-	4700 5400 4700 7150
-Wire Wire Line
-	4700 7150 4900 7150
-Connection ~ 4900 7150
-Wire Wire Line
-	6100 7150 5900 7150
-Wire Wire Line
-	5900 7150 5900 5400
-Wire Wire Line
-	5900 5400 6200 5400
-Wire Wire Line
-	6200 5400 6200 5550
-Connection ~ 6100 7150
-Wire Wire Line
-	4000 7150 4500 7150
-Wire Wire Line
-	4500 7150 4500 5350
-Wire Wire Line
-	4500 5350 4900 5350
-Wire Wire Line
-	4900 5350 4900 5550
-Connection ~ 4000 7150
-Wire Wire Line
-	5200 7150 5700 7150
-Wire Wire Line
-	5700 7150 5700 5350
-Wire Wire Line
-	5700 5350 6100 5350
-Wire Wire Line
-	6100 5350 6100 5550
-Connection ~ 5200 7150
-Wire Wire Line
-	3950 5150 3950 5400
-Wire Wire Line
-	3950 5400 4050 5400
-Wire Wire Line
-	4050 5400 4050 5550
-Connection ~ 3950 5400
-Wire Wire Line
-	5150 5150 5150 5400
-Connection ~ 3950 5150
-Wire Wire Line
-	5150 5400 5250 5400
-Wire Wire Line
-	5250 5400 5250 5550
-Connection ~ 5150 5400
-Wire Wire Line
-	6350 5150 6350 5400
-Connection ~ 5150 5150
-Wire Wire Line
-	6350 5400 6450 5400
-Wire Wire Line
-	6450 5400 6450 5550
-Connection ~ 6350 5400
-Wire Wire Line
 	18850 2500 18700 2500
 Wire Wire Line
 	18700 2500 18700 2300
@@ -1435,146 +1223,60 @@ Wire Wire Line
 Wire Wire Line
 	16450 5150 16600 5150
 Wire Wire Line
-	10700 2900 10550 2900
+	11100 2900 10950 2900
 Wire Wire Line
-	10550 3100 10700 3100
+	10950 3100 11100 3100
 Wire Wire Line
-	12100 3000 11900 3000
+	12500 3000 12300 3000
 Wire Wire Line
-	2250 2050 3000 2050
+	12350 1950 12200 1950
 Wire Wire Line
-	3000 2050 3000 2400
+	12200 1950 12200 1750
 Wire Wire Line
-	4750 2050 4750 2400
+	12200 1750 13700 1500
 Wire Wire Line
-	3300 3800 3300 3950
+	13700 1500 13700 1200
 Wire Wire Line
-	3300 3950 4200 3950
+	13550 1200 13700 1200
 Wire Wire Line
-	4200 3950 4200 2150
+	12350 1300 12200 1300
 Wire Wire Line
-	4200 2150 4950 2150
+	12200 1300 12200 1500
 Wire Wire Line
-	4950 2150 4950 2400
+	12200 1500 13700 1750
 Wire Wire Line
-	3500 3800 3500 4050
+	13700 1750 13700 2050
 Wire Wire Line
-	3500 4050 3950 4050
+	13550 2050 13700 2050
 Wire Wire Line
-	3600 3800 3600 4200
+	12150 2150 12250 2150
+Connection ~ 13700 2050
+Connection ~ 13700 1200
 Wire Wire Line
-	3600 4200 3950 4200
+	10900 7850 11100 7850
 Wire Wire Line
-	3700 3800 3700 4350
+	12300 7950 12450 7950
 Wire Wire Line
-	3700 4350 3950 4350
+	13500 8250 13650 8250
 Wire Wire Line
-	3800 3800 3800 4500
+	12450 7950 12450 8250
 Wire Wire Line
-	3800 4500 3950 4500
+	12450 8250 12600 8250
+Connection ~ 12450 7950
 Wire Wire Line
-	5250 3800 5250 4050
-Wire Wire Line
-	5250 4050 5700 4050
-Wire Wire Line
-	5350 3800 5350 4200
-Wire Wire Line
-	5350 4200 5700 4200
-Wire Wire Line
-	5450 3800 5450 4350
-Wire Wire Line
-	5450 4350 5700 4350
-Wire Wire Line
-	5550 3800 5550 4500
-Wire Wire Line
-	5550 4500 5700 4500
-Wire Wire Line
-	11950 1950 11800 1950
-Wire Wire Line
-	11800 1950 11800 1750
-Wire Wire Line
-	11800 1750 13300 1500
-Wire Wire Line
-	13300 1500 13300 1200
-Wire Wire Line
-	13150 1200 13300 1200
-Wire Wire Line
-	11950 1300 11800 1300
-Wire Wire Line
-	11800 1300 11800 1500
-Wire Wire Line
-	11800 1500 13300 1750
-Wire Wire Line
-	13300 1750 13300 2050
-Wire Wire Line
-	13150 2050 13300 2050
-Wire Wire Line
-	11750 2150 11850 2150
-Connection ~ 13300 2050
-Connection ~ 13300 1200
-Wire Wire Line
-	2250 2250 2800 2250
-Wire Wire Line
-	4550 2250 4550 2400
-Wire Wire Line
-	2800 2250 2800 2400
-Connection ~ 2800 2250
-Connection ~ 3000 2050
-Wire Wire Line
-	10500 7850 10700 7850
-Wire Wire Line
-	11900 7950 12050 7950
-Wire Wire Line
-	13100 8250 13250 8250
-Wire Wire Line
-	12050 7950 12050 8250
-Wire Wire Line
-	12050 8250 12200 8250
-Connection ~ 12050 7950
-Wire Wire Line
-	10500 8050 10700 8050
-Wire Wire Line
-	6000 2550 6000 2850
-Wire Wire Line
-	6000 2850 6150 2850
-Wire Wire Line
-	6000 3350 6150 3350
-Connection ~ 6000 2850
-Wire Wire Line
-	6700 3950 6800 3950
-Wire Wire Line
-	6800 3950 6800 3800
-Wire Wire Line
-	5050 3800 5050 3950
-Wire Wire Line
-	5050 3950 5900 3950
-Wire Wire Line
-	5900 3950 5900 3100
-Wire Wire Line
-	5900 3100 6150 3100
+	10900 8050 11100 8050
 Wire Wire Line
 	20850 4200 21000 4200
 Wire Wire Line
-	3850 5150 3950 5150
+	12150 1100 12350 1100
 Wire Wire Line
-	11750 1100 11950 1100
+	10750 2050 10950 2050
 Wire Wire Line
-	3100 1900 3100 2300
+	10950 2250 10750 2250
 Wire Wire Line
-	3100 2300 3200 2300
+	12400 2800 12500 2800
 Wire Wire Line
-	3200 2300 3200 2400
-Connection ~ 3100 2300
-Wire Wire Line
-	4850 1900 4850 2400
-Wire Wire Line
-	10350 2050 10550 2050
-Wire Wire Line
-	10550 2250 10350 2250
-Wire Wire Line
-	12000 2800 12100 2800
-Wire Wire Line
-	13450 2900 13300 2900
+	13850 2900 13700 2900
 Wire Wire Line
 	16450 5350 16600 5350
 Wire Wire Line
@@ -1716,166 +1418,142 @@ Wire Wire Line
 	17950 12400 17950 13000
 $Comp
 L power:+5V #PWR?
-U 1 1 57B293E2
-P 6000 2550
-F 0 "#PWR?" H 6000 2640 20  0001 C CNN
-F 1 "+5V" H 6000 2640 30  0000 C CNN
-F 2 "" H 6000 2550 60  0000 C CNN
-F 3 "" H 6000 2550 60  0000 C CNN
-	1    6000 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
 U 1 1 57B29763
-P 3100 1900
-F 0 "#PWR?" H 3100 1990 20  0001 C CNN
-F 1 "+5V" H 3100 1990 30  0000 C CNN
-F 2 "" H 3100 1900 60  0000 C CNN
-F 3 "" H 3100 1900 60  0000 C CNN
-	1    3100 1900
+P 2500 3250
+F 0 "#PWR?" H 2500 3340 20  0001 C CNN
+F 1 "+5V" H 2500 3340 30  0000 C CNN
+F 2 "" H 2500 3250 60  0000 C CNN
+F 3 "" H 2500 3250 60  0000 C CNN
+	1    2500 3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 57B29769
-P 4850 1900
-F 0 "#PWR?" H 4850 1990 20  0001 C CNN
-F 1 "+5V" H 4850 1990 30  0000 C CNN
-F 2 "" H 4850 1900 60  0000 C CNN
-F 3 "" H 4850 1900 60  0000 C CNN
-	1    4850 1900
+P 2500 4500
+F 0 "#PWR?" H 2500 4590 20  0001 C CNN
+F 1 "+5V" H 2500 4590 30  0000 C CNN
+F 2 "" H 2500 4500 60  0000 C CNN
+F 3 "" H 2500 4500 60  0000 C CNN
+	1    2500 4500
 	1    0    0    -1  
 $EndComp
-Text GLabel 3400 5300 0    60   Input ~ 0
--HRESET
-Wire Wire Line
-	3400 5300 3700 5300
-Wire Wire Line
-	3700 5300 3700 5550
-NoConn ~ 6200 7000
-Wire Wire Line
-	7650 2850 7450 2850
-Text GLabel 7650 3350 2    60   Output ~ 0
--256H
-Wire Wire Line
-	7650 3350 7450 3350
 $Comp
 L anotherworld-rescue:7402-RESCUE-anotherworld U?
 U 1 1 57B29E2D
-P 12700 4450
+P 13100 4450
 AR Path="/57B29E2D" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57B29E2D" Ref="U?"  Part="1" 
-F 0 "U?" H 12700 4500 60  0000 C CNN
-F 1 "7402" H 12750 4400 60  0000 C CNN
-F 2 "~" H 12700 4450 60  0000 C CNN
-F 3 "~" H 12700 4450 60  0000 C CNN
-	1    12700 4450
+F 0 "U?" H 13100 4500 60  0000 C CNN
+F 1 "7402" H 13150 4400 60  0000 C CNN
+F 2 "~" H 13100 4450 60  0000 C CNN
+F 3 "~" H 13100 4450 60  0000 C CNN
+	1    13100 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L anotherworld-rescue:7402-RESCUE-anotherworld U?
 U 1 1 57B29E33
-P 12700 5300
+P 13100 5300
 AR Path="/57B29E33" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57B29E33" Ref="U?"  Part="1" 
-F 0 "U?" H 12700 5350 60  0000 C CNN
-F 1 "7402" H 12750 5250 60  0000 C CNN
-F 2 "~" H 12700 5300 60  0000 C CNN
-F 3 "~" H 12700 5300 60  0000 C CNN
-	1    12700 5300
+F 0 "U?" H 13100 5350 60  0000 C CNN
+F 1 "7402" H 13150 5250 60  0000 C CNN
+F 2 "~" H 13100 5300 60  0000 C CNN
+F 3 "~" H 13100 5300 60  0000 C CNN
+	1    13100 5300
 	1    0    0    -1  
 $EndComp
-Text GLabel 13650 5300 2    60   Output ~ 0
+Text GLabel 14050 5300 2    60   Output ~ 0
 -HSYNC
-Text GLabel 13650 4450 2    60   Output ~ 0
+Text GLabel 14050 4450 2    60   Output ~ 0
 HSYNC
-Text Notes 10200 5850 0    118  ~ 0
+Text Notes 10600 5850 0    118  ~ 0
 HSyncStart = 336
 Wire Wire Line
-	12100 5200 11950 5200
+	12500 5200 12350 5200
 Wire Wire Line
-	11950 5200 11950 5000
+	12350 5200 12350 5000
 Wire Wire Line
-	11950 5000 13450 4750
+	12350 5000 13850 4750
 Wire Wire Line
-	13450 4750 13450 4450
+	13850 4750 13850 4450
 Wire Wire Line
-	13300 4450 13450 4450
+	13700 4450 13850 4450
 Wire Wire Line
-	12100 4550 11950 4550
+	12500 4550 12350 4550
 Wire Wire Line
-	11950 4550 11950 4750
+	12350 4550 12350 4750
 Wire Wire Line
-	11950 4750 13450 5000
+	12350 4750 13850 5000
 Wire Wire Line
-	13450 5000 13450 5300
+	13850 5000 13850 5300
 Wire Wire Line
-	13300 5300 13450 5300
+	13700 5300 13850 5300
 Wire Wire Line
-	11900 5400 12000 5400
-Connection ~ 13450 5300
-Connection ~ 13450 4450
+	12300 5400 12400 5400
+Connection ~ 13850 5300
+Connection ~ 13850 4450
 Wire Wire Line
-	11900 4350 12100 4350
-Text GLabel 10500 4250 0    60   Input ~ 0
+	12300 4350 12500 4350
+Text GLabel 10900 4250 0    60   Input ~ 0
 336H
 $Comp
 L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
 U 1 1 57B29E67
-P 11300 4350
+P 11700 4350
 AR Path="/57B29E67" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57B29E67" Ref="U?"  Part="1" 
-F 0 "U?" H 11300 4400 60  0000 C CNN
-F 1 "74LS08" H 11300 4300 60  0000 C CNN
-F 2 "~" H 11300 4350 60  0000 C CNN
-F 3 "~" H 11300 4350 60  0000 C CNN
-	1    11300 4350
+F 0 "U?" H 11700 4400 60  0000 C CNN
+F 1 "74LS08" H 11700 4300 60  0000 C CNN
+F 2 "~" H 11700 4350 60  0000 C CNN
+F 3 "~" H 11700 4350 60  0000 C CNN
+	1    11700 4350
 	1    0    0    -1  
 $EndComp
-Text Notes 10200 4100 0    118  ~ 0
+Text Notes 10600 4100 0    118  ~ 0
 HSyncEnd = 368
 Wire Wire Line
-	10500 4250 10700 4250
+	10900 4250 11100 4250
 Wire Wire Line
-	10500 4450 10700 4450
+	10900 4450 11100 4450
 $Comp
 L anotherworld-rescue:74LS08-RESCUE-anotherworld U?
 U 1 1 57B2A01A
-P 11300 5400
+P 11700 5400
 AR Path="/57B2A01A" Ref="U?"  Part="1" 
 AR Path="/57AAB07E/57B2A01A" Ref="U?"  Part="1" 
-F 0 "U?" H 11300 5450 60  0000 C CNN
-F 1 "74LS08" H 11300 5350 60  0000 C CNN
-F 2 "~" H 11300 5400 60  0000 C CNN
-F 3 "~" H 11300 5400 60  0000 C CNN
-	1    11300 5400
+F 0 "U?" H 11700 5450 60  0000 C CNN
+F 1 "74LS08" H 11700 5350 60  0000 C CNN
+F 2 "~" H 11700 5400 60  0000 C CNN
+F 3 "~" H 11700 5400 60  0000 C CNN
+	1    11700 5400
 	1    0    0    -1  
 $EndComp
-Text GLabel 10350 5500 0    60   Input ~ 0
+Text GLabel 10750 5500 0    60   Input ~ 0
 16H
 Wire Wire Line
-	10350 5500 10700 5500
-Text GLabel 11950 2400 2    60   Output ~ 0
+	10750 5500 11100 5500
+Text GLabel 12350 2400 2    60   Output ~ 0
 320H
 Wire Wire Line
-	11950 2400 11850 2400
+	12350 2400 12250 2400
 Wire Wire Line
-	11850 2400 11850 2150
-Connection ~ 11850 2150
-Text GLabel 10350 5300 0    60   Input ~ 0
+	12250 2400 12250 2150
+Connection ~ 12250 2150
+Text GLabel 10750 5300 0    60   Input ~ 0
 320H
 Wire Wire Line
-	10350 5300 10700 5300
-Text GLabel 10500 4450 0    60   Input ~ 0
+	10750 5300 11100 5300
+Text GLabel 10900 4450 0    60   Input ~ 0
 32H
-Text GLabel 12100 5650 2    60   Output ~ 0
+Text GLabel 12500 5650 2    60   Output ~ 0
 336H
 Wire Wire Line
-	12100 5650 12000 5650
+	12500 5650 12400 5650
 Wire Wire Line
-	12000 5650 12000 5400
-Connection ~ 12000 5400
+	12400 5650 12400 5400
+Connection ~ 12400 5400
 Text GLabel 17150 1750 0    60   Input ~ 0
 200V
 Text GLabel 19650 5400 2    60   Output ~ 0
@@ -1891,16 +1569,16 @@ VSyncStart = 200
 Wire Wire Line
 	19450 5400 19450 5150
 Connection ~ 19450 5150
-Text Notes 10900 7650 0    197  ~ 0
+Text Notes 11300 7650 0    197  ~ 0
 ?????
 Wire Notes Line
-	9450 800  14600 800 
+	9850 800  15000 800 
 Wire Notes Line
-	14600 800  14600 6450
+	15000 800  15000 6450
 Wire Notes Line
-	14600 6450 9450 6450
+	15000 6450 9850 6450
 Wire Notes Line
-	9450 6450 9450 800 
+	9850 6450 9850 800 
 Wire Notes Line
 	15800 850  15800 6400
 Wire Notes Line
@@ -1918,13 +1596,13 @@ Wire Notes Line
 Wire Notes Line
 	22100 7200 15800 7200
 Wire Notes Line
-	14600 8700 9450 8700
+	15000 8700 9850 8700
 Wire Notes Line
-	9450 8700 9450 7150
+	9850 8700 9850 7150
 Wire Notes Line
-	9450 7150 14600 7150
+	9850 7150 15000 7150
 Wire Notes Line
-	14600 7150 14600 8700
+	15000 7150 15000 8700
 Wire Notes Line
 	5900 9050 5900 15850
 Wire Notes Line
@@ -1936,11 +1614,11 @@ Wire Notes Line
 Wire Notes Line
 	1300 1550 8500 1550
 Wire Notes Line
-	8500 1550 8500 8150
+	9100 1600 9100 8200
 Wire Notes Line
 	8500 8150 1300 8150
 Wire Notes Line
-	1300 8150 1300 1550
+	-9150 8400 -9150 1800
 Text Notes 2700 11900 0    197  ~ 0
 TO-DO:\n\nVIDEO\nSRAM
 Wire Notes Line
@@ -2054,43 +1732,15 @@ Wire Wire Line
 Wire Wire Line
 	10600 12350 12850 12350
 Wire Wire Line
-	3700 7150 3700 7350
-Wire Wire Line
-	4900 7150 4900 7350
-Wire Wire Line
-	6100 7150 6100 7350
-Wire Wire Line
-	4000 7150 4000 7800
-Wire Wire Line
-	5200 7150 5200 7800
-Wire Wire Line
-	3950 5400 3950 5550
-Wire Wire Line
-	3950 5150 5150 5150
-Wire Wire Line
-	5150 5400 5150 5550
-Wire Wire Line
-	5150 5150 6350 5150
-Wire Wire Line
-	6350 5400 6350 5550
-Wire Wire Line
 	20200 2600 20400 2600
 Wire Wire Line
 	20200 1750 20400 1750
 Wire Wire Line
-	13300 2050 13500 2050
+	13700 2050 13900 2050
 Wire Wire Line
-	13300 1200 13500 1200
+	13700 1200 13900 1200
 Wire Wire Line
-	2800 2250 4550 2250
-Wire Wire Line
-	3000 2050 4750 2050
-Wire Wire Line
-	12050 7950 13250 7950
-Wire Wire Line
-	6000 2850 6000 3350
-Wire Wire Line
-	3100 2300 3100 2400
+	12450 7950 13650 7950
 Wire Wire Line
 	9700 13100 11950 13100
 Wire Wire Line
@@ -2100,15 +1750,296 @@ Wire Wire Line
 Wire Wire Line
 	19450 4100 19650 4100
 Wire Wire Line
-	13450 5300 13650 5300
+	13850 5300 14050 5300
 Wire Wire Line
-	13450 4450 13650 4450
+	13850 4450 14050 4450
 Wire Wire Line
-	11850 2150 11950 2150
+	12250 2150 12350 2150
 Wire Wire Line
-	12000 5400 12100 5400
+	12400 5400 12500 5400
 Wire Wire Line
 	19450 5150 19650 5150
 Wire Wire Line
 	18650 1650 18850 1650
+$Comp
+L o_ttl:74LS393 U?
+U 1 1 5B36A82E
+P 2500 3750
+F 0 "U?" H 2700 4100 60  0000 C CNN
+F 1 "74LS393" H 2400 3750 60  0000 C CNN
+F 2 "" H 2500 3750 50  0001 C CNN
+F 3 "" H 2500 3750 50  0001 C CNN
+	1    2500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L o_ttl:74LS393 U?
+U 1 1 5B52EC0A
+P 2500 5000
+F 0 "U?" H 2700 5350 60  0000 C CNN
+F 1 "74LS393" H 2400 5000 60  0000 C CNN
+F 2 "" H 2500 5000 50  0001 C CNN
+F 3 "" H 2500 5000 50  0001 C CNN
+	1    2500 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3250 2500 3350
+Wire Wire Line
+	2500 4600 2500 4500
+Text GLabel 1500 3550 0    60   Input ~ 0
+PIXEL_CLOCK
+Text GLabel 1500 3950 0    60   Input ~ 0
+HRESET
+Wire Wire Line
+	1500 3950 1750 3950
+Wire Wire Line
+	1750 3950 1750 5200
+Wire Wire Line
+	1750 5200 1900 5200
+Connection ~ 1750 3950
+Wire Wire Line
+	1750 3950 1900 3950
+Wire Wire Line
+	1500 3550 1900 3550
+Text GLabel 1600 4800 0    60   Input ~ 0
+8H
+Wire Wire Line
+	1900 4800 1600 4800
+Wire Wire Line
+	3100 3550 4700 3550
+Wire Wire Line
+	4700 3550 4700 3250
+Wire Wire Line
+	4550 3250 4550 3650
+Wire Wire Line
+	4550 3650 3100 3650
+Wire Wire Line
+	3100 3750 4400 3750
+Wire Wire Line
+	4400 3750 4400 3250
+Wire Wire Line
+	4250 3850 3100 3850
+Wire Wire Line
+	4250 3250 4250 3850
+Wire Wire Line
+	4100 3250 4100 4800
+Wire Wire Line
+	4100 4800 3100 4800
+Wire Wire Line
+	3100 4900 3950 4900
+Wire Wire Line
+	3950 4900 3950 3250
+Wire Wire Line
+	3800 3250 3800 5000
+Wire Wire Line
+	3800 5000 3100 5000
+Wire Wire Line
+	3100 5100 3650 5100
+Wire Wire Line
+	3650 5100 3650 3250
+Text GLabel 3500 3250 1    60   Output ~ 0
+256H
+$Comp
+L power:+5V #PWR?
+U 1 1 5C5023D6
+P 2500 5750
+F 0 "#PWR?" H 2500 5840 20  0001 C CNN
+F 1 "+5V" H 2500 5840 30  0000 C CNN
+F 2 "" H 2500 5750 60  0000 C CNN
+F 3 "" H 2500 5750 60  0000 C CNN
+	1    2500 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L o_ttl:74LS393 U?
+U 1 1 5C5023DC
+P 2500 6250
+F 0 "U?" H 2700 6600 60  0000 C CNN
+F 1 "74LS393" H 2400 6250 60  0000 C CNN
+F 2 "" H 2500 6250 50  0001 C CNN
+F 3 "" H 2500 6250 50  0001 C CNN
+	1    2500 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5850 2500 5750
+Wire Wire Line
+	1750 5200 1750 6450
+Wire Wire Line
+	1750 6450 1900 6450
+Text GLabel 1600 6050 0    60   Input ~ 0
+128H
+Wire Wire Line
+	1900 6050 1600 6050
+Connection ~ 1750 5200
+Text GLabel 3350 3250 1    60   Output ~ 0
+512H
+Wire Wire Line
+	3500 3250 3500 6050
+Wire Wire Line
+	3500 6050 3100 6050
+Wire Wire Line
+	3100 6150 3350 6150
+Wire Wire Line
+	3350 6150 3350 3250
+NoConn ~ 3100 6350
+NoConn ~ 3100 6250
+Text GLabel 8400 3250 1    60   Output ~ 0
+8V
+Text GLabel 8550 3250 1    60   Output ~ 0
+4V
+Text GLabel 8700 3250 1    60   Output ~ 0
+2V
+Text GLabel 8850 3250 1    60   Output ~ 0
+1V
+Text GLabel 7800 3250 1    60   Output ~ 0
+128V
+Text GLabel 7950 3250 1    60   Output ~ 0
+64V
+Text GLabel 8100 3250 1    60   Output ~ 0
+32V
+Text GLabel 8250 3250 1    60   Output ~ 0
+16V
+$Comp
+L power:+5V #PWR?
+U 1 1 5C6A8C03
+P 6650 3250
+F 0 "#PWR?" H 6650 3340 20  0001 C CNN
+F 1 "+5V" H 6650 3340 30  0000 C CNN
+F 2 "" H 6650 3250 60  0000 C CNN
+F 3 "" H 6650 3250 60  0000 C CNN
+	1    6650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C6A8C09
+P 6650 4500
+F 0 "#PWR?" H 6650 4590 20  0001 C CNN
+F 1 "+5V" H 6650 4590 30  0000 C CNN
+F 2 "" H 6650 4500 60  0000 C CNN
+F 3 "" H 6650 4500 60  0000 C CNN
+	1    6650 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L o_ttl:74LS393 U?
+U 1 1 5C6A8C0F
+P 6650 3750
+F 0 "U?" H 6850 4100 60  0000 C CNN
+F 1 "74LS393" H 6550 3750 60  0000 C CNN
+F 2 "" H 6650 3750 50  0001 C CNN
+F 3 "" H 6650 3750 50  0001 C CNN
+	1    6650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L o_ttl:74LS393 U?
+U 1 1 5C6A8C15
+P 6650 5000
+F 0 "U?" H 6850 5350 60  0000 C CNN
+F 1 "74LS393" H 6550 5000 60  0000 C CNN
+F 2 "" H 6650 5000 50  0001 C CNN
+F 3 "" H 6650 5000 50  0001 C CNN
+	1    6650 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3250 6650 3350
+Wire Wire Line
+	6650 4600 6650 4500
+Text GLabel 5650 3550 0    60   Input ~ 0
+HRESET
+Text GLabel 5650 3950 0    60   Input ~ 0
+VRESET
+Wire Wire Line
+	5650 3950 5900 3950
+Wire Wire Line
+	5900 3950 5900 5200
+Wire Wire Line
+	5900 5200 6050 5200
+Connection ~ 5900 3950
+Wire Wire Line
+	5900 3950 6050 3950
+Wire Wire Line
+	5650 3550 6050 3550
+Text GLabel 5750 4800 0    60   Input ~ 0
+8V
+Wire Wire Line
+	6050 4800 5750 4800
+Wire Wire Line
+	7250 3550 8850 3550
+Wire Wire Line
+	8850 3550 8850 3250
+Wire Wire Line
+	8700 3250 8700 3650
+Wire Wire Line
+	8700 3650 7250 3650
+Wire Wire Line
+	7250 3750 8550 3750
+Wire Wire Line
+	8550 3750 8550 3250
+Wire Wire Line
+	8400 3850 7250 3850
+Wire Wire Line
+	8400 3250 8400 3850
+Wire Wire Line
+	8250 3250 8250 4800
+Wire Wire Line
+	8250 4800 7250 4800
+Wire Wire Line
+	7250 4900 8100 4900
+Wire Wire Line
+	8100 4900 8100 3250
+Wire Wire Line
+	7950 3250 7950 5000
+Wire Wire Line
+	7950 5000 7250 5000
+Wire Wire Line
+	7250 5100 7800 5100
+Wire Wire Line
+	7800 5100 7800 3250
+Text GLabel 7650 3250 1    60   Output ~ 0
+256V
+$Comp
+L power:+5V #PWR?
+U 1 1 5C6A8C38
+P 6650 5750
+F 0 "#PWR?" H 6650 5840 20  0001 C CNN
+F 1 "+5V" H 6650 5840 30  0000 C CNN
+F 2 "" H 6650 5750 60  0000 C CNN
+F 3 "" H 6650 5750 60  0000 C CNN
+	1    6650 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L o_ttl:74LS393 U?
+U 1 1 5C6A8C3E
+P 6650 6250
+F 0 "U?" H 6850 6600 60  0000 C CNN
+F 1 "74LS393" H 6550 6250 60  0000 C CNN
+F 2 "" H 6650 6250 50  0001 C CNN
+F 3 "" H 6650 6250 50  0001 C CNN
+	1    6650 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 5850 6650 5750
+Wire Wire Line
+	5900 5200 5900 6450
+Wire Wire Line
+	5900 6450 6050 6450
+Text GLabel 5750 6050 0    60   Input ~ 0
+128V
+Wire Wire Line
+	6050 6050 5750 6050
+Connection ~ 5900 5200
+Wire Wire Line
+	7650 3250 7650 6050
+Wire Wire Line
+	7650 6050 7250 6050
+NoConn ~ 7250 6350
+NoConn ~ 7250 6250
+NoConn ~ 7250 6150
 $EndSCHEMATC
